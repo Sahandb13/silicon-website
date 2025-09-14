@@ -275,10 +275,22 @@ input:checked + .slider::after {
   padding: 1.5rem 0;
 }
 
+/* How it Works - telefonbilder lika stora och snyggt i rad */
 .steps-grid {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: end;
 }
+
+.phone {
+  height: 360px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
 
 /* ========== APP FEATURES ========== */
 .app-features {
@@ -343,10 +355,18 @@ input:checked + .slider::after {
   padding: 0.5rem 0.75rem 1rem;
 }
 
-/* ========== SUBSCRIBE ========== */
+/* SUBSCRIBE Section */
 .subscribe {
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   text-align: center;
+}
+.subscribe-img {
+  width: 100%;
+  max-width: 620px;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .subscribe img {
@@ -411,4 +431,62 @@ a:focus-visible {
   .features-grid { grid-template-columns: repeat(3, 1fr); }
   .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
   .brand-logos { gap: 2rem; }
+}
+/* SUBSCRIBE Section */
+.subscribe-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-img {
+  width: 100%;
+  max-width: 620px;
+  border-radius: 16px;
+  display: block;
+}
+
+.subscribe-form-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.85); /* Light background behind form */
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.subscribe-form-overlay input[type="email"] {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 240px;
+  background: white;
+  color: var(--text);
+}
+
+.subscribe-form-overlay input::placeholder {
+  color: var(--muted);
+}
+
+.subscribe-form-overlay button {
+  padding: 0.75rem 1.2rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.subscribe-form-overlay button:hover {
+  background: var(--accent);
 }
