@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Silicon – Demo</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Silicon</a>
+
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#app-features">App</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-controls">
+        <div class="theme-toggle">
+          <i class="fa-regular fa-sun"></i>
+          <label class="switch">
+            <input id="theme-switch" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+          <i class="fa-regular fa-moon"></i>
+        </div>
+        <a class="btn primary" href="#">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>Manage All Your Money in One App</h1>
+        <p class="lead">Track your expenses, set goals and manage all your accounts in one secure place.</p>
+        <div class="store-buttons">
+          <a href="#" class="store-btn">
+            <img src="images/appstore.png" alt="Download on the App Store" />
+          </a>
+          <a href="#" class="store-btn">
+            <img src="images/googleplay.png" alt="Get it on Google Play" />
+          </a>
+        </div>
+      </div>
+      <div class="hero-images">
+        <img src="images/Iphone 12 pro1.png" alt="App Screen 1" class="phone phone-front" />
+        <img src="images/iPhone 12 Pro2.png" alt="App Screen 2" class="phone phone-back" />
+      </div>
+    </div>
+  </section>
+
+  <section id="brands" class="brands">
+    <div class="container">
+      <div class="brand-logos">
+        <img src="images/logos.png" alt="Partner logos" />
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+      <p class="section-desc">Everything you need to stay on top of your finances</p>
+      <div class="features-grid">
+        <article class="card">
+          <i class="fa-solid fa-chart-pie"></i>
+          <h3>Budgeting</h3>
+          <p>Track income and expenses with smart charts.</p>
+        </article>
+        <article class="card">
+          <i class="fa-solid fa-piggy-bank"></i>
+          <h3>Saving</h3>
+          <p>Set goals and save automatically.</p>
+        </article>
+        <article class="card">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>Security</h3>
+          <p>Bank-level encryption and safe connections.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How it works</h2>
+      <p class="section-desc">Get started in three simple steps</p>
+      <div class="steps-grid">
+        <img src="images/Iphone 12 pro1.png" alt="Step 1" />
+        <img src="images/iPhone 12 Pro2.png" alt="Step 2" />
+        <img src="images/iPhone 12 Pro3.png" alt="Step 3" />
+      </div>
+    </div>
+  </section>
+
+  <section id="app-features" class="app-features">
+    <div class="container">
+      <h2 class="section-title">App Features</h2>
+      <div class="app-screens card">
+        <img src="images/AppFeatures (1).png" alt="App screenshots" width="300" height="400" />
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What our users say</h2>
+      <div class="testimonial-grid">
+        <blockquote class="card">
+          <img src="images/testimonialalberrt.png" alt="Albert" />
+        </blockquote>
+        <blockquote class="card">
+          <img src="images/testimonial fannie.png" alt="Fannie" />
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item card">
+          <button class="faq-question">Is the app free?</button>
+          <div class="faq-answer">Yes, the basic version is free. Premium features are available.</div>
+        </div>
+        <div class="faq-item card">
+          <button class="faq-question">Are all banks supported?</button>
+          <div class="faq-answer">Most major banks are supported through trusted providers.</div>
+        </div>
+        <div class="faq-item card">
+          <button class="faq-question">How secure is my data?</button>
+          <div class="faq-answer">All data is encrypted and no passwords are stored.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscribe">
+    <div class="container">
+      <img src="images/Subscribe.png" alt="Subscribe illustration" />
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Silicon</h3>
+        <p>Financial management made simple.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="#">Contact</a>
+      </div>
+      <div>
+        <p>&copy; <span id="year"></span> Silicon. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
