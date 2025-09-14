@@ -447,46 +447,81 @@ a:focus-visible {
   display: block;
 }
 
-.subscribe-form-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.85); /* Light background behind form */
-  padding: 1rem 1.25rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+/* Form ontop of picture */
+.subscribe {
+  padding: 2rem 0;
+  background: transparent;
 }
 
-.subscribe-form-overlay input[type="email"] {
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 1rem;
-  min-width: 240px;
-  background: white;
+.subscribe-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8faff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.05);
+  gap: 1.25rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.subscribe-icon-text i {
+  font-size: 1.5rem;
+  color: #6366f1; /* eller var(--primary) */
+  background: #fef3c7;
+  padding: 0.6rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.subscribe-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.subscribe-icon-text img {
+  height: 32px;
+}
+
+.subscribe-icon-text p {
+  margin: 0;
+  font-weight: 600;
   color: var(--text);
 }
 
-.subscribe-form-overlay input::placeholder {
-  color: var(--muted);
+.subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
-.subscribe-form-overlay button {
+.subscribe-form input[type="email"] {
+  flex: 1;
+  min-width: 240px;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: none;
+  background: white;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.subscribe-form button {
   padding: 0.75rem 1.2rem;
   background: var(--primary);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
-.subscribe-form-overlay button:hover {
+.subscribe-form button:hover {
   background: var(--accent);
 }
