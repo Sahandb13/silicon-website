@@ -5,14 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Silicon – Demo</title>
 
-  <!-- Fonts & Icons -->
+  <!-- MARK: Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Accessibility helper */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- MARK: Header -->
   <header class="header">
     <div class="container header-inner">
       <a class="logo" href="#">Silicon</a>
@@ -28,19 +43,19 @@
       </nav>
       <div class="header-controls">
         <div class="theme-toggle">
-          <i class="fa-regular fa-sun"></i>
+          <i class="fa-regular fa-sun" aria-hidden="true"></i>
           <label class="switch">
-            <input id="theme-switch" type="checkbox">
+            <input id="theme-switch" type="checkbox" aria-label="Toggle dark mode">
             <span class="slider"></span>
           </label>
-          <i class="fa-regular fa-moon"></i>
+          <i class="fa-regular fa-moon" aria-hidden="true"></i>
         </div>
         <a class="btn primary" href="#">Download</a>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- MARK: Hero -->
   <section id="hero" class="hero">
     <div class="container hero-grid">
       <div class="hero-content">
@@ -56,40 +71,40 @@
         </div>
       </div>
       <div class="hero-images">
-        <img src="images/iphone12pro1.png" alt="App Screen 1" class="phone phone-front">
-        <img src="images/iphone12pro2.png" alt="App Screen 2" class="phone phone-back">
+        <img src="images/iphone12pro1.png" alt="App screen 1" class="phone phone-front">
+        <img src="images/iphone12pro2.png" alt="App screen 2" class="phone phone-back">
       </div>
     </div>
   </section>
 
-  <!-- BRANDS -->
+  <!-- MARK: Brands -->
   <section id="brands" class="brands">
     <div class="container">
       <h2 class="visually-hidden">Our Partners</h2>
       <div class="brand-logos">
-        <img src="images/logos.png" alt="Partner logos">
+        <img src="images/logos.png" alt="Partner company logos">
       </div>
     </div>
   </section>
 
-  <!-- FEATURES -->
+  <!-- MARK: Features -->
   <section id="features" class="features">
     <div class="container">
       <h2 class="section-title">Features</h2>
       <p class="section-desc">Everything you need to stay on top of your finances</p>
       <div class="features-grid">
-        <article class="card">
-          <i class="fa-solid fa-chart-pie"></i>
+        <article class="card feature-card">
+          <i class="fa-solid fa-chart-pie feature-icon"></i>
           <h3>Budgeting</h3>
           <p>Track income and expenses with smart charts.</p>
         </article>
-        <article class="card">
-          <i class="fa-solid fa-piggy-bank"></i>
+        <article class="card feature-card">
+          <i class="fa-solid fa-piggy-bank feature-icon"></i>
           <h3>Saving</h3>
           <p>Set goals and save automatically.</p>
         </article>
-        <article class="card">
-          <i class="fa-solid fa-shield-halved"></i>
+        <article class="card feature-card">
+          <i class="fa-solid fa-shield-halved feature-icon"></i>
           <h3>Security</h3>
           <p>Bank-level encryption and safe connections.</p>
         </article>
@@ -97,7 +112,7 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
+  <!-- MARK: How it works -->
   <section id="how-it-works" class="how-it-works">
     <div class="container">
       <h2 class="section-title">How it works</h2>
@@ -110,70 +125,76 @@
     </div>
   </section>
 
-  <!-- APP FEATURES -->
+  <!-- MARK: App Features -->
   <section id="app-features" class="app-features">
     <div class="container">
       <h2 class="section-title">App Features</h2>
       <div class="app-screens card">
-        <img src="images/Appfeatures.png" alt="App screenshots" width="300" height="400">
+        <img src="images/Appfeatures.png" alt="App screenshots" class="app-img">
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- MARK: Testimonials -->
   <section id="testimonials" class="testimonials">
     <div class="container">
       <h2 class="section-title">What our users say</h2>
       <div class="testimonial-grid">
         <blockquote class="card">
-          <img src="images/testimonial-alberrt.png" alt="Albert">
+          <img src="images/testimonial-alberrt.png" alt="Testimonial from Albert">
         </blockquote>
         <blockquote class="card">
-          <img src="images/testimonial-fannie.png" alt="Fannie">
+          <img src="images/testimonial-fannie.png" alt="Testimonial from Fannie">
         </blockquote>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- MARK: FAQ -->
   <section id="faq" class="faq">
     <div class="container">
       <h2 class="section-title">Frequently Asked Questions</h2>
       <div class="faq-list">
         <div class="faq-item card">
-          <button class="faq-question">Is the app free?</button>
-          <div class="faq-answer">Yes, the basic version is free. Premium features are available.</div>
+          <button class="faq-question" aria-expanded="false" aria-controls="a1" id="q1">Is the app free?</button>
+          <div class="faq-answer" id="a1" role="region" aria-labelledby="q1">
+            Yes, the basic version is free. Premium features are available.
+          </div>
         </div>
         <div class="faq-item card">
-          <button class="faq-question">Are all banks supported?</button>
-          <div class="faq-answer">Most major banks are supported through trusted providers.</div>
+          <button class="faq-question" aria-expanded="false" aria-controls="a2" id="q2">Are all banks supported?</button>
+          <div class="faq-answer" id="a2" role="region" aria-labelledby="q2">
+            Most major banks are supported through trusted providers.
+          </div>
         </div>
         <div class="faq-item card">
-          <button class="faq-question">How secure is my data?</button>
-          <div class="faq-answer">All data is encrypted and no passwords are stored.</div>
+          <button class="faq-question" aria-expanded="false" aria-controls="a3" id="q3">How secure is my data?</button>
+          <div class="faq-answer" id="a3" role="region" aria-labelledby="q3">
+            All data is encrypted and no passwords are stored.
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SUBSCRIBE -->
+  <!-- MARK: Subscribe -->
   <section class="subscribe">
     <div class="container">
       <h2 class="section-title">Subscribe</h2>
       <div class="subscribe-card">
         <div class="subscribe-icon-text">
-          <i class="fa-solid fa-bell"></i>
-          <p>Subscribe to our newsletter to stay informed about latest updates</p>
+          <i class="fa-solid fa-bell" aria-hidden="true"></i>
+          <p>Subscribe to our newsletter to stay informed about the latest updates</p>
         </div>
         <form class="subscribe-form" action="#" method="post">
-          <input type="email" placeholder="Write your email" required>
+          <input type="email" name="email" placeholder="Write your email" required>
           <button type="submit" class="btn primary">Subscribe</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- MARK: Footer -->
   <footer class="footer">
     <div class="container footer-grid">
       <div>
@@ -191,7 +212,7 @@
     </div>
   </footer>
 
-  <!-- JS -->
+  <!-- MARK: Scripts -->
   <script src="js/script.js"></script>
 </body>
 </html>

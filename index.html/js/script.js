@@ -1,23 +1,23 @@
-// === Theme toggle (light/dark) ===
+// MARK: Theme toggle
 const themeSwitch = document.getElementById('theme-switch');
-const html = document.documentElement;
+const rootEl = document.documentElement;
 
-// Load saved theme from localStorage or default to 'light'
-const savedTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', savedTheme);
+// Använd sparat tema eller systemets preferens
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+rootEl.setAttribute('data-theme', savedTheme);
 
-// Set toggle state based on saved theme
 if (themeSwitch) {
   themeSwitch.checked = savedTheme === 'dark';
 
   themeSwitch.addEventListener('change', () => {
     const newTheme = themeSwitch.checked ? 'dark' : 'light';
-    html.setAttribute('data-theme', newTheme);
+    rootEl.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
   });
 }
 
-// === Mobile navigation toggle ===
+// MARK: Mobile navigation
 const navBtn = document.querySelector('.nav-toggle');
 const nav = document.getElementById('primary-nav');
 
@@ -28,32 +28,33 @@ if (navBtn && nav) {
     nav.classList.toggle('nav-open');
   });
 
-  // Close the menu when clicking outside
+  // Stäng menyn om man klickar utanför
   document.addEventListener('click', (e) => {
-    const clickedOutside = !e.target.closest('.nav') && !e.target.closest('.nav-toggle');
-    if (nav.classList.contains('nav-open') && clickedOutside) {
+    if (!e.target.closest('.nav, .nav-toggle')) {
       nav.classList.remove('nav-open');
       navBtn.setAttribute('aria-expanded', 'false');
     }
   });
 }
 
-// === FAQ accordion ===
+// MARK: FAQ accordion
 const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
   const btn = item.querySelector('.faq-question');
+  if (!btn) return;
 
   btn.addEventListener('click', () => {
     const isActive = item.classList.contains('active');
 
-    // Close all others
+    // Stäng alla
     faqItems.forEach(i => {
       i.classList.remove('active');
-      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      const q = i.querySelector('.faq-question');
+      if (q) q.setAttribute('aria-expanded', 'false');
     });
 
-    // Toggle current item
+    // Öppna aktuell
     if (!isActive) {
       item.classList.add('active');
       btn.setAttribute('aria-expanded', 'true');
@@ -61,7 +62,7 @@ faqItems.forEach(item => {
   });
 });
 
-// === Dynamic footer year ===
+// MARK: Footer year
 const yearEl = document.getElementById('year');
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
