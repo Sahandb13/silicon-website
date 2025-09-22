@@ -1,7 +1,7 @@
 # Silicon Landing Page – Inlämningsuppgift
 
 Detta är min implementation av designmallen *Silicon* (från kursens uppgift).  
-Sidan är byggd med **HTML, CSS och JavaScript** och följer kraven för [G/VG].
+Sidan är byggd med **HTML, CSS och JavaScript** och följer kraven för [VG].
 
 ## Arbetsprocess
 - Jag började med att sätta upp HTML-strukturen utifrån designfilen i Figma.
@@ -31,3 +31,11 @@ Jag har använt branches för de olika sektionerna (t.ex. `hero-section`, `faq-s
 - Theme-toggle med localStorage
 - FAQ-accordion med tillgänglighetsattribut
 - Dynamiskt årtal i footern
+
+## Kravuppfyllnad (checklista)
+- [x] Sektioner: Header, Hero, Brands, Features, How-Does-It-Work, App Features, Testimonials, FAQ, Subscribe, Footer  
+- [x] Mobile-first & responsiv (VG)  
+- [x] Light & Dark theme (VG)  
+- [x] Toggle mellan teman (VG)  
+- [x] FAQ-accordion: en öppen i taget (VG)  
+- [x] GitHub-repo med branches per sektion (VG)
