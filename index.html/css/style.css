@@ -1,6 +1,4 @@
-/* Silicon, project by @boromir */
-
-/* ========== COLORS / VARIABLES ========== */
+/* MARK: Variables & Colors */
 :root {
   --bg: #ffffff;
   --surface: #f8fafc;
@@ -25,7 +23,7 @@ html[data-theme="dark"] {
   --border: #1b2f44;
 }
 
-/* ========== RESET & BASE ========== */
+/* MARK: Reset & Base */
 * { box-sizing: border-box; }
 
 body {
@@ -51,7 +49,7 @@ img[src=""], img:not([src]) { opacity: 0; }
 .section-title { text-align: center; font-size: 1.25rem; margin-bottom: .5rem; }
 .section-desc { text-align: center; color: var(--muted); margin-bottom: 1rem; }
 
-/* ========== HEADER ========== */
+/* MARK: Header */
 .header {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -130,9 +128,7 @@ img[src=""], img:not([src]) { opacity: 0; }
   height: 22px;
 }
 
-.switch input {
-  display: none;
-}
+.switch input { display: none; }
 
 .slider {
   position: absolute;
@@ -154,18 +150,11 @@ img[src=""], img:not([src]) { opacity: 0; }
   transition: transform var(--transition);
 }
 
-input:checked + .slider {
-  background: var(--primary);
-}
+input:checked + .slider { background: var(--primary); }
+input:checked + .slider::after { transform: translateX(18px); }
 
-input:checked + .slider::after {
-  transform: translateX(18px);
-}
-
-/* ========== HERO ========== */
-.hero {
-  padding: 3rem 0;
-}
+/* MARK: Hero */
+.hero { padding: 3rem 0; }
 
 .hero-grid {
   display: grid;
@@ -197,9 +186,7 @@ input:checked + .slider::after {
   transition: transform 0.2s;
 }
 
-.store-btn img:hover {
-  transform: scale(1.05);
-}
+.store-btn img:hover { transform: scale(1.05); }
 
 .hero-images {
   position: relative;
@@ -209,8 +196,11 @@ input:checked + .slider::after {
   gap: 1rem;
 }
 
+/* Shared phone style */
 .phone {
   height: 360px;
+  max-width: 100%;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -220,14 +210,10 @@ input:checked + .slider::after {
   z-index: 0;
 }
 
-.phone-front {
-  z-index: 1;
-}
+.phone-front { z-index: 1; }
 
-/* ========== BRANDS ========== */
-.brands {
-  padding: 1rem 0;
-}
+/* MARK: Brands */
+.brands { padding: 1rem 0; }
 
 .brand-logos {
   display: flex;
@@ -242,10 +228,8 @@ input:checked + .slider::after {
   filter: grayscale(40%);
 }
 
-/* ========== FEATURES ========== */
-.features {
-  padding: 1.5rem 0;
-}
+/* MARK: Features */
+.features { padding: 1.5rem 0; }
 
 .features-grid {
   display: grid;
@@ -260,9 +244,7 @@ input:checked + .slider::after {
   box-shadow: 0 4px 12px rgba(0,0,0,.05);
 }
 
-.feature-card {
-  text-align: center;
-}
+.feature-card { text-align: center; }
 
 .feature-icon {
   font-size: 1.6rem;
@@ -270,12 +252,9 @@ input:checked + .slider::after {
   margin-bottom: .5rem;
 }
 
-/* ========== HOW IT WORKS ========== */
-.how-it-works {
-  padding: 1.5rem 0;
-}
+/* MARK: How it works */
+.how-it-works { padding: 1.5rem 0; }
 
-/* How it Works - telefonbilder lika stora och snyggt i rad */
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -284,18 +263,8 @@ input:checked + .slider::after {
   align-items: end;
 }
 
-.phone {
-  height: 360px;
-  max-width: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-
-/* ========== APP FEATURES ========== */
-.app-features {
-  padding: 1.5rem 0;
-}
+/* MARK: App features */
+.app-features { padding: 1.5rem 0; }
 
 .app-screens {
   display: flex;
@@ -311,20 +280,16 @@ input:checked + .slider::after {
   border-radius: 10px;
 }
 
-/* ========== TESTIMONIALS ========== */
-.testimonials {
-  padding: 1.5rem 0;
-}
+/* MARK: Testimonials */
+.testimonials { padding: 1.5rem 0; }
 
 .testimonial-grid {
   display: grid;
   gap: 1rem;
 }
 
-/* ========== FAQ ========== */
-.faq {
-  padding: 1.5rem 0;
-}
+/* MARK: FAQ */
+.faq { padding: 1.5rem 0; }
 
 .faq-list {
   display: grid;
@@ -355,11 +320,9 @@ input:checked + .slider::after {
   padding: 0.5rem 0.75rem 1rem;
 }
 
-/* SUBSCRIBE Section */
-.subscribe {
-  padding: 2rem 0;
-  text-align: center;
-}
+/* MARK: Subscribe */
+.subscribe { padding: 2rem 0; text-align: center; }
+
 .subscribe-img {
   width: 100%;
   max-width: 620px;
@@ -375,89 +338,11 @@ input:checked + .slider::after {
   border-radius: var(--radius);
 }
 
-/* ========== FOOTER ========== */
-.footer {
-  padding: 1rem 0;
-  border-top: 1px solid var(--border);
-}
-
-.footer-grid {
-  display: grid;
-  gap: .75rem;
-}
-
-/* ========== NAV OPEN (MOBILE) ========== */
-.nav-open {
-  display: flex !important;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: var(--surface);
-  flex-direction: column;
-  padding: 1rem;
-  border-top: 1px solid var(--border);
-  box-shadow: 0 4px 12px rgba(0,0,0,.1);
-  z-index: 1000;
-}
-
-/* ========== ACCESSIBILITY + SMOOTH SCROLL ========== */
-button:focus-visible,
-a:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
-/* ========== RESPONSIVE ========== */
-@media (min-width: 640px) {
-  .hero-content h1 { font-size: 2.5rem; }
-  .hero-grid { grid-template-columns: 1fr 380px; }
-  .nav { display: flex; }
-  .nav-toggle { display: none; }
-  .features-grid { grid-template-columns: repeat(2, 1fr); }
-  .steps-grid { grid-template-columns: repeat(3, 1fr); }
-  .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: 1fr auto; }
-}
-
-@media (min-width: 1024px) {
-  .hero-content h1 { font-size: 3rem; }
-  .features-grid { grid-template-columns: repeat(3, 1fr); }
-  .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
-  .brand-logos { gap: 2rem; }
-}
-/* SUBSCRIBE Section */
-.subscribe-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.subscribe-img {
-  width: 100%;
-  max-width: 620px;
-  border-radius: 16px;
-  display: block;
-}
-
-/* Form ontop of picture */
-.subscribe {
-  padding: 2rem 0;
-  background: transparent;
-}
-
 .subscribe-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f8faff;
+  background: var(--surface);
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.05);
@@ -465,15 +350,6 @@ a:focus-visible {
   max-width: 720px;
   margin: 0 auto;
 }
-.subscribe-icon-text i {
-  font-size: 1.5rem;
-  color: #6366f1; /* eller var(--primary) */
-  background: #fef3c7;
-  padding: 0.6rem;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 
 .subscribe-icon-text {
   display: flex;
@@ -482,9 +358,16 @@ a:focus-visible {
   text-align: left;
 }
 
-.subscribe-icon-text img {
-  height: 32px;
+.subscribe-icon-text i {
+  font-size: 1.5rem;
+  color: var(--primary);
+  background: #fef3c7;
+  padding: 0.6rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+.subscribe-icon-text img { height: 32px; }
 
 .subscribe-icon-text p {
   margin: 0;
@@ -522,6 +405,60 @@ a:focus-visible {
   transition: background 0.2s ease;
 }
 
-.subscribe-form button:hover {
-  background: var(--accent);
+.subscribe-form button:hover { background: var(--accent); }
+
+/* MARK: Footer */
+.footer {
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+  display: grid;
+  gap: .75rem;
+}
+
+/* MARK: Mobile nav open */
+.nav-open {
+  display: flex !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  flex-direction: column;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  z-index: 1000;
+}
+
+/* MARK: A11y & smooth scroll */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* MARK: Responsive */
+@media (min-width: 640px) {
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-grid { grid-template-columns: 1fr 380px; }
+  .nav { display: flex; }
+  .nav-toggle { display: none; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid { grid-template-columns: repeat(3, 1fr); }
+  .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr auto; }
+}
+
+@media (min-width: 1024px) {
+  .hero-content h1 { font-size: 3rem; }
+  .features-grid { grid-template-columns: repeat(3, 1fr); }
+  .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
+  .brand-logos { gap: 2rem; }
 }
