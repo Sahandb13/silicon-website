@@ -1,4 +1,4 @@
-// === Theme toggle (light/dark) ===
+// MARK: Theme toggle (light/dark)
 const themeSwitch = document.getElementById('theme-switch');
 const html = document.documentElement;
 
@@ -17,7 +17,7 @@ if (themeSwitch) {
   });
 }
 
-// === Mobile navigation toggle ===
+// MARK: Mobile navigation toggle
 const navBtn = document.querySelector('.nav-toggle');
 const nav = document.getElementById('primary-nav');
 
@@ -38,7 +38,7 @@ if (navBtn && nav) {
   });
 }
 
-// === FAQ accordion ===
+// MARK: FAQ accordion
 const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
@@ -61,7 +61,7 @@ faqItems.forEach(item => {
   });
 });
 
-// === Dynamic footer year ===
+// MARK: Dynamic footer year
 const yearEl = document.getElementById('year');
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
