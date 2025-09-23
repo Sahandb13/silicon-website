@@ -154,8 +154,36 @@ input:checked + .slider { background: var(--primary); }
 input:checked + .slider::after { transform: translateX(18px); }
 
 /* MARK: Hero */
-.hero { padding: 3rem 0; }
+.hero {
+  position: relative;
+  isolation: isolate; /* keep overlay behind content */
+  padding: 3rem 0;
+  background:
+    url('../images/bg.png') center / cover no-repeat,
+    var(--bg); /* color fallback if the image fails */
+}
 
+/* Soft overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65); /* light mode */
+  z-index: 0;
+}
+
+/* Darker overlay in dark mode */
+html[data-theme="dark"] .hero::before {
+  background: rgba(7, 17, 39, 0.55);
+}
+
+/* Ensure content sits above the overlay */
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Layout */
 .hero-grid {
   display: grid;
   gap: 2rem;
@@ -196,7 +224,7 @@ input:checked + .slider::after { transform: translateX(18px); }
   gap: 1rem;
 }
 
-/* Shared phone style */
+/* Single shared phone style (used in hero & how-it-works) */
 .phone {
   height: 360px;
   max-width: 100%;
@@ -212,21 +240,18 @@ input:checked + .slider::after { transform: translateX(18px); }
 
 .phone-front { z-index: 1; }
 
-/* MARK: Brands */
-.brands { padding: 1rem 0; }
-
-.brand-logos {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+/* Responsive tweaks (match your existing breakpoints) */
+@media (min-width: 640px) {
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-grid { grid-template-columns: 1fr 380px; }
 }
 
-.brand-logos img {
-  height: 60px;
-  opacity: .9;
-  filter: grayscale(40%);
+@media (min-width: 1024px) {
+  .hero-content h1 { font-size: 3rem; }
+  /* Optional subtle parallax feel: */
+  .hero { background-attachment: fixed; }
 }
+
 
 /* MARK: Features */
 .features { padding: 1.5rem 0; }
@@ -252,15 +277,50 @@ input:checked + .slider::after { transform: translateX(18px); }
   margin-bottom: .5rem;
 }
 
-/* MARK: How it works */
-.how-it-works { padding: 1.5rem 0; }
+/* MARK: How it works) */
+.how-it-works {
+  position: relative;
+  isolation: isolate; /* overlay stays behind content */
+  padding: 1.5rem 0;
+  background:
+    url('../images/bgHiW.png') center / cover no-repeat,
+    var(--bg); /* fallback color if image fails */
+}
 
+/* Soft overlay for readability */
+.how-it-works::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65); /* light mode */
+  z-index: 0;
+}
+
+/* Darker overlay in dark mode */
+html[data-theme="dark"] .how-it-works::before {
+  background: rgba(7, 17, 39, 0.55);
+}
+
+/* Ensure content is above overlay */
+.how-it-works .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Steps grid */
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   justify-items: center;
   align-items: end;
+}
+
+/* To stop picture from moving while scrolling */
+@media (min-width: 1024px) {
+  .how-it-works {
+    background-attachment: fixed;
+  }
 }
 
 /* MARK: App features */
@@ -280,8 +340,43 @@ input:checked + .slider::after { transform: translateX(18px); }
   border-radius: 10px;
 }
 
-/* MARK: Testimonials */
-.testimonials { padding: 1.5rem 0; }
+/* Testimonials */
+.testimonials {
+  position: relative;
+  isolation: isolate; /* keep overlay behind the content layer */
+  padding: 1.5rem 0;
+  background:
+    url('../images/bgtestimonials.png') center / cover no-repeat,
+    var(--bg); /* fallback color if the image isn’t available */
+}
+
+/* Contrast overlay so avatars/text stay readable */
+.testimonials::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65); /* light mode tint */
+  z-index: 0;
+}
+
+/* Dark mode: cooler overlay tint */
+html[data-theme="dark"] .testimonials::before {
+  background: rgba(7, 17, 39, 0.55);
+}
+
+/* Ensure content sits above the overlay layer */
+.testimonials .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Large screens: fixed background for a subtle depth effect */
+@media (min-width: 1024px) {
+  .testimonials {
+    background-attachment: fixed;
+  }
+}
+
 
 .testimonial-grid {
   display: grid;
