@@ -13,32 +13,29 @@
 <body>
 
   <!-- MARK: Header -->
-  <header class="header">
-    <div class="container header-inner">
-      <a class="logo" href="#">Silicon</a>
-      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
-        <span class="hamburger"></span>
-      </button>
-      <nav id="primary-nav" class="nav">
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#app-features">App</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <div class="header-controls">
-        <div class="theme-toggle">
-          <i class="fa-regular fa-sun"></i>
-          <label class="switch">
-            <input id="theme-switch" type="checkbox">
-            <span class="slider"></span>
-          </label>
-          <i class="fa-regular fa-moon"></i>
-        </div>
-        <a class="btn primary" href="#">Download</a>
-      </div>
+ <header class="header">
+  <div class="container header-inner">
+    <!-- Logo med ikon -->
+    <a class="logo" href="#">
+      <img src="images/solid.png" alt="Silicon logo" class="logo-icon">
+    </a>
+
+    <!-- Dark mode toggle med text -->
+    <div class="header-controls">
+      <label class="theme-toggle">
+        <span>Dark Mode</span>
+        <label class="switch">
+          <input id="theme-switch" type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </label>
+
+      <!-- Sign in/up knapp -->
+      <a class="btn primary" href="#">Sign in / up</a>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <!-- MARK: Hero -->
   <section id="hero" class="hero">
