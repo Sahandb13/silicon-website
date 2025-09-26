@@ -132,11 +132,13 @@ html[data-theme="dark"] .hero::before { background: rgba(7,17,39,.5); }
 .how-it-works::before { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,.6); z-index: 0; }
 html[data-theme="dark"] .how-it-works::before { background: rgba(7,17,39,.5); }
 .how-it-works .container { position: relative; z-index: 1; }
+/* Steps grid */
 .steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 1rem; justify-items: center; align-items: end;
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically if you want */
 }
+
 @media (min-width: 1024px) { .how-it-works { background-attachment: fixed; } }
 
 /* MARK: App features */

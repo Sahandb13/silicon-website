@@ -7,35 +7,35 @@
 
   <!-- MARK: Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Keep Font Awesome since you use <i class="fa-..."> icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- MARK: Header -->
- <header class="header">
-  <div class="container header-inner">
-    <!-- Logo med ikon -->
-    <a class="logo" href="#">
-      <img src="images/solid.png" alt="Silicon logo" class="logo-icon">
-    </a>
+  <header class="header">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a class="logo" href="#" aria-label="Silicon home">
+        <img src="images/solid.png" alt="Silicon logo" class="logo-icon">
+      </a>
 
-    <!-- Dark mode toggle med text -->
-    <div class="header-controls">
-      <label class="theme-toggle">
-        <span>Dark Mode</span>
-        <label class="switch">
-          <input id="theme-switch" type="checkbox">
-          <span class="slider"></span>
+      <!-- Header controls: theme toggle + auth button -->
+      <div class="header-controls">
+        <!-- Accessible dark mode switch -->
+        <label class="theme-toggle" for="theme-switch">
+          <span>Dark Mode</span>
+          <span class="switch">
+            <input id="theme-switch" type="checkbox" aria-label="Toggle dark mode">
+            <span class="slider" aria-hidden="true"></span>
+          </span>
         </label>
-      </label>
 
-      <!-- Sign in/up knapp -->
-      <a class="btn primary" href="#">Sign in / up</a>
+        <a class="btn primary" href="#">Sign in / up</a>
+      </div>
     </div>
-  </div>
-</header>
-
+  </header>
 
   <!-- MARK: Hero -->
   <section id="hero" class="hero">
@@ -44,17 +44,18 @@
         <h1>Manage All Your Money in One App</h1>
         <p class="lead">Track your expenses, set goals and manage all your accounts in one secure place.</p>
         <div class="store-buttons">
-          <a href="#" class="store-btn">
+          <a href="#" class="store-btn" aria-label="Download on the App Store">
             <img src="images/appstore.png" alt="Download on the App Store">
           </a>
-          <a href="#" class="store-btn">
+          <a href="#" class="store-btn" aria-label="Get it on Google Play">
             <img src="images/googleplay.png" alt="Get it on Google Play">
           </a>
         </div>
       </div>
-      <div class="hero-images">
-        <img src="images/Iphone12pro1.png" alt="App Screen 1" class="phone phone-front">
-        <img src="images/iPhone12pro2.png" alt="App Screen 2" class="phone phone-back">
+
+      <div class="hero-images" aria-hidden="true">
+        <img src="images/Iphone12pro1.png" alt="" class="phone phone-front">
+        <img src="images/iPhone12pro2.png" alt="" class="phone phone-back">
       </div>
     </div>
   </section>
@@ -75,18 +76,18 @@
       <h2 class="section-title">Features</h2>
       <p class="section-desc">Everything you need to stay on top of your finances</p>
       <div class="features-grid">
-        <article class="card">
-          <i class="fa-solid fa-chart-pie"></i>
+        <article class="card feature-card">
+          <i class="fa-solid fa-chart-pie feature-icon" aria-hidden="true"></i>
           <h3>Budgeting</h3>
           <p>Track income and expenses with smart charts.</p>
         </article>
-        <article class="card">
-          <i class="fa-solid fa-piggy-bank"></i>
+        <article class="card feature-card">
+          <i class="fa-solid fa-piggy-bank feature-icon" aria-hidden="true"></i>
           <h3>Saving</h3>
           <p>Set goals and save automatically.</p>
         </article>
-        <article class="card">
-          <i class="fa-solid fa-shield-halved"></i>
+        <article class="card feature-card">
+          <i class="fa-solid fa-shield-halved feature-icon" aria-hidden="true"></i>
           <h3>Security</h3>
           <p>Bank-level encryption and safe connections.</p>
         </article>
@@ -100,9 +101,8 @@
       <h2 class="section-title">How it works</h2>
       <p class="section-desc">Get started in three simple steps</p>
       <div class="steps-grid">
-        <img src="images/carousel.png" alt="Step 1" class="phone">
-    
-       
+        <!-- Keep single illustrative image; add real steps later if needed -->
+        <img src="images/carousel.png" alt="Illustration of the 3 steps" class="phone">
       </div>
     </div>
   </section>
@@ -112,7 +112,7 @@
     <div class="container">
       <h2 class="section-title">App Features</h2>
       <div class="app-screens card">
-        <img src="images/AppFeatures.png" alt="App screenshots" width="300" height="400">
+        <img src="images/AppFeatures.png" alt="App feature screens" width="300" height="400">
       </div>
     </div>
   </section>
@@ -122,9 +122,12 @@
     <div class="container">
       <h2 class="section-title">What our users say</h2>
       <div class="testimonial-grid">
+        <!-- Use a single image blockquote card (close tags correctly) -->
         <blockquote class="card">
-          <img src="images/Testimonials.png" alt="Albert">
-  
+          <img src="images/Testimonials.png" alt="Customer testimonials">
+        </blockquote>
+      </div>
+    </div>
   </section>
 
   <!-- MARK: FAQ -->
@@ -133,40 +136,34 @@
       <h2 class="section-title">Frequently Asked Questions</h2>
       <div class="faq-list">
         <div class="faq-item card">
-          <button class="faq-question">Is the app free?</button>
-          <div class="faq-answer">Yes, the basic version is free. Premium features are available.</div>
+          <button class="faq-question" aria-expanded="false">Is the app free?</button>
+          <div class="faq-answer" role="region" aria-hidden="true">Yes, the basic version is free. Premium features are available.</div>
         </div>
         <div class="faq-item card">
-          <button class="faq-question">Are all banks supported?</button>
-          <div class="faq-answer">Most major banks are supported through trusted providers.</div>
+          <button class="faq-question" aria-expanded="false">Are all banks supported?</button>
+          <div class="faq-answer" role="region" aria-hidden="true">Most major banks are supported through trusted providers.</div>
         </div>
         <div class="faq-item card">
-          <button class="faq-question">How secure is my data?</button>
-          <div class="faq-answer">All data is encrypted and no passwords are stored.</div>
+          <button class="faq-question" aria-expanded="false">How secure is my data?</button>
+          <div class="faq-answer" role="region" aria-hidden="true">All data is encrypted and no passwords are stored.</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- MARK: Subscribe -->
-<section class="subscribe-section">
-  <div class="subscribe-wrapper">
-    <!-- Background subscribe image with embedded text -->
-    <img src="images/Subscribe.png" alt="Subscribe" class="subscribe-image">
+  <section class="subscribe-section">
+    <div class="subscribe-wrapper">
+      <!-- Background image contains all visible text and button -->
+      <img src="images/Subscribe.png" alt="Subscribe section" class="subscribe-image">
 
-    <!-- Invisible but functional form overlay -->
-    <form class="subscribe-form" action="#" method="post">
-      <input type="email" name="email" required>
-      <button type="submit"></button>
-    </form>
-  </div>
-</section>
-
-
-    </form>
-  </div>
-</section>
-
+      <!-- Invisible but functional overlay aligned to image -->
+      <form class="subscribe-form" action="#" method="post">
+        <input type="email" name="email" aria-label="Email address" required>
+        <button type="submit" aria-label="Subscribe"></button>
+      </form>
+    </div>
+  </section>
 
   <!-- MARK: Footer -->
   <footer class="footer">
@@ -175,11 +172,11 @@
         <h3>Silicon</h3>
         <p>Financial management made simple.</p>
       </div>
-      <div class="footer-links">
+      <nav class="footer-links" aria-label="Footer">
         <a href="#features">Features</a>
         <a href="#faq">FAQ</a>
         <a href="#">Contact</a>
-      </div>
+      </nav>
       <div>
         <p>&copy; <span id="year"></span> Silicon. All rights reserved.</p>
       </div>
