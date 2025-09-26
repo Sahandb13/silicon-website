@@ -12,175 +12,211 @@
 </head>
 <body>
 
-  <!-- MARK: Header -->
-  <header class="header">
-    <div class="container header-inner">
-      <!-- Logo -->
-      <a class="logo" href="#" aria-label="Silicon home">
-        <img src="images/solid.png" alt="Silicon logo" class="logo-icon dm-1" width="120" height="32">
-      </a>
+<!-- MARK: Header -->
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="#" aria-label="Silicon home">
+      <img src="images/solid.png" 
+           alt="Silicon logo" 
+           class="logo-icon dm-logo" 
+           width="120" height="32">
+    </a>
 
-      <!-- Header controls: theme toggle + auth button -->
-      <div class="header-controls">
-        <!-- Accessible dark mode switch -->
-        <label class="theme-toggle" for="theme-switch">
-          <span>Dark Mode</span>
-          <span class="switch">
-            <input id="theme-switch" type="checkbox" aria-label="Toggle dark mode">
-            <span class="slider" aria-hidden="true"></span>
-          </span>
-        </label>
+    <div class="header-controls">
+      <label class="theme-toggle" for="theme-switch">
+        <span>Dark Mode</span>
+        <span class="switch">
+          <input id="theme-switch" type="checkbox" aria-label="Toggle dark mode">
+          <span class="slider" aria-hidden="true"></span>
+        </span>
+      </label>
+      <a class="btn primary" href="#">Sign in / up</a>
+    </div>
+  </div>
+</header>
 
-        <a class="btn primary" href="#">Sign in / up</a>
+<!-- MARK: Hero -->
+<section id="hero" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <h1>Manage All Your Money in One App</h1>
+      <p class="lead">Track your expenses, set goals and manage all your accounts in one secure place.</p>
+
+      <div class="store-buttons">
+        <a href="#" class="store-btn" aria-label="Download on the App Store">
+          <img src="images/appstore.png" alt="Download on the App Store" class="dm-2" width="180" height="54">
+        </a>
+        <a href="#" class="store-btn" aria-label="Get it on Google Play">
+          <img src="images/googleplay.png" alt="Get it on Google Play" class="dm-3" width="180" height="54">
+        </a>
       </div>
     </div>
-  </header>
 
-  <!-- MARK: Hero -->
-  <section id="hero" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <!-- Rubrik som text (ingen bild-dublett) -->
-        <h1>Manage All Your Money in One App</h1>
+    <div class="hero-images" aria-hidden="true">
+      <img src="images/Iphone12pro1.png" alt="" class="phone phone-front" width="360" height="720">
+      <img src="images/iPhone12pro2.png" alt="" class="phone phone-back" width="360" height="720">
+    </div>
+  </div>
+</section>
 
-        <p class="lead">Track your expenses, set goals and manage all your accounts in one secure place.</p>
+<!-- MARK: Brands -->
+<section id="brands" class="brands">
+  <div class="container">
+    <h2 class="visually-hidden">Our Partners</h2>
+    <div class="brand-logos">
+      <img src="images/logos.png" alt="Partner logos" class="dm-4" width="1200" height="200">
+    </div>
+  </div>
+</section>
 
-        <div class="store-buttons">
-          <a href="#" class="store-btn" aria-label="Download on the App Store">
-            <img src="images/appstore.png" alt="Download on the App Store" class="dm-2" width="180" height="54">
-          </a>
-          <a href="#" class="store-btn" aria-label="Get it on Google Play">
-            <img src="images/googleplay.png" alt="Get it on Google Play" class="dm-3" width="180" height="54">
-          </a>
+<!-- MARK: Features -->
+<section id="features" class="features">
+  <div class="container">
+    <img src="images/featureslight.png" 
+         alt="App features overview" 
+         class="dm-9" 
+         width="1920" height="500">
+  </div>
+</section>
+
+<!-- MARK: How it works -->
+<section id="how-it-works" class="how-it-works">
+  <div class="container">
+    <div class="steps-grid">
+      <img src="images/Sliderlight.png" 
+           alt="Illustration of the 3 steps" 
+           class="howitworks-img dm-5" 
+           width="1920" height="1000">
+    </div>
+  </div>
+</section>
+
+<!-- MARK: App Features -->
+<section id="app-features" class="app-features">
+  <div class="container">
+    <div class="app-screens card">
+      <img src="images/AppFeatures.png" alt="App feature screens" class="dm-6" width="600" height="400">
+    </div>
+  </div>
+</section>
+
+<!-- MARK: Testimonials -->
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <img src="images/Testimonials.png" 
+         class="dm-testimonials" 
+         width="1200" height="600" 
+         alt="User testimonials">
+  </div>
+</section>
+
+<!-- MARK: FAQ -->
+<section id="faq" class="faq">
+  <div class="container">
+    <!-- Basbild (light/dark via CSS swap) -->
+    <img src="images/FAQ.png"
+         alt="Frequently Asked Questions"
+         class="dm-10"
+         width="1200" height="600">
+
+    <!-- Overlay med klickbara zoner -->
+    <div class="faq-hotspots">
+      <!-- Item 1 -->
+      <div class="faq-item faq-1">
+        <button class="faq-question" aria-expanded="false">
+          Is any of my personal information stored in the App?
+        </button>
+        <div class="faq-answer" role="region" aria-hidden="true">
+          We store only what is required to run your account, never your bank credentials.
         </div>
       </div>
 
-      <div class="hero-images" aria-hidden="true">
-        <img src="images/Iphone12pro1.png" alt="" class="phone phone-front" width="360" height="720">
-        <img src="images/iPhone12pro2.png" alt="" class="phone phone-back" width="360" height="720">
-      </div>
-    </div>
-  </section>
-
-  <!-- MARK: Brands -->
-  <section id="brands" class="brands">
-    <div class="container">
-      <h2 class="visually-hidden">Our Partners</h2>
-      <div class="brand-logos">
-        <img src="images/logos.png" alt="Partner logos" class="dm-4" width="1200" height="200">
-      </div>
-    </div>
-  </section>
-
-  <!-- MARK: Features -->
-  <section id="features" class="features">
-    <div class="container">
-      <h2 class="section-title">Features</h2>
-      <p class="section-desc">Everything you need to stay on top of your finances</p>
-      <div class="features-grid">
-        <article class="card feature-card">
-          <i class="fa-solid fa-chart-pie feature-icon" aria-hidden="true"></i>
-          <h3>Budgeting</h3>
-          <p>Track income and expenses with smart charts.</p>
-        </article>
-        <article class="card feature-card">
-          <i class="fa-solid fa-piggy-bank feature-icon" aria-hidden="true"></i>
-          <h3>Saving</h3>
-          <p>Set goals and save automatically.</p>
-        </article>
-        <article class="card feature-card">
-          <i class="fa-solid fa-shield-halved feature-icon" aria-hidden="true"></i>
-          <h3>Security</h3>
-          <p>Bank-level encryption and safe connections.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- MARK: How it works -->
-  <section id="how-it-works" class="how-it-works">
-    <div class="container">
-      <h2 class="section-title">How it works</h2>
-      <p class="section-desc">Get started in three simple steps</p>
-      <div class="steps-grid">
-        <img src="images/carousel.png" alt="Illustration of the 3 steps" class="phone dm-5" width="600" height="360">
-      </div>
-    </div>
-  </section>
-
-  <!-- MARK: App Features -->
-  <section id="app-features" class="app-features">
-    <div class="container">
-      <h2 class="section-title">App Features</h2>
-      <div class="app-screens card">
-        <img src="images/AppFeatures.png" alt="App feature screens" class="dm-6" width="300" height="400">
-      </div>
-    </div>
-  </section>
-
-  <!-- MARK: Testimonials -->
-  <section id="testimonials" class="testimonials">
-    <div class="container">
-      <h2 class="section-title">What our users say</h2>
-      <div class="testimonial-grid">
-        <blockquote class="card">
-          <img src="images/Testimonials.png" alt="Customer testimonials" class="dm-7" width="1200" height="400">
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- MARK: FAQ -->
-  <section id="faq" class="faq">
-    <div class="container">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item card">
-          <button class="faq-question" aria-expanded="false">Is the app free?</button>
-          <div class="faq-answer" role="region" aria-hidden="true">Yes, the basic version is free. Premium features are available.</div>
+      <!-- Item 2 -->
+      <div class="faq-item faq-2">
+        <button class="faq-question" aria-expanded="false">
+          What formats can I download my transaction history in?
+        </button>
+        <div class="faq-answer" role="region" aria-hidden="true">
+          Export to CSV, PDF, or XLSX from the Statements screen.
         </div>
-        <div class="faq-item card">
-          <button class="faq-question" aria-expanded="false">Are all banks supported?</button>
-          <div class="faq-answer" role="region" aria-hidden="true">Most major banks are supported through trusted providers.</div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="faq-item faq-3">
+        <button class="faq-question" aria-expanded="false">
+          Can I schedule future transfers?
+        </button>
+        <div class="faq-answer" role="region" aria-hidden="true">
+          Yes — pick a future date and we will process it automatically.
         </div>
-        <div class="faq-item card">
-          <button class="faq-question" aria-expanded="false">How secure is my data?</button>
-          <div class="faq-answer" role="region" aria-hidden="true">All data is encrypted and no passwords are stored.</div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="faq-item faq-4">
+        <button class="faq-question" aria-expanded="false">
+          When can I use Banking App services?
+        </button>
+        <div class="faq-answer" role="region" aria-hidden="true">
+          Our app is available 24/7, except during scheduled maintenance windows.
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="faq-item faq-5">
+        <button class="faq-question" aria-expanded="false">
+          Can I create my own password that is easy for me to remember?
+        </button>
+        <div class="faq-answer" role="region" aria-hidden="true">
+          Yes, as long as it meets our minimum security requirements (8+ characters, mix of letters and numbers).
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="faq-item faq-6">
+        <button class="faq-question" aria-expanded="false">
+          What happens if I forget or lose my password?
+        </button>
+        <div class="faq-answer" role="region" aria-hidden="true">
+          You can reset your password using your registered email address or phone number.
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- MARK: Subscribe -->
-  <section class="subscribe-section">
-    <div class="subscribe-wrapper">
-      <img src="images/Subscribe.png" alt="Subscribe section" class="subscribe-image dm-8" width="1296" height="222">
-      <form class="subscribe-form" action="#" method="post">
-        <input type="email" name="email" aria-label="Email address" required>
-        <button type="submit" aria-label="Subscribe"></button>
-      </form>
+
+<!-- MARK: Subscribe -->
+<section class="subscribe-section">
+  <div class="subscribe-wrapper">
+    <img src="images/Subscribe.png" alt="Subscribe section" class="subscribe-image dm-8" width="1296" height="222">
+    <form class="subscribe-form" action="#" method="post">
+      <input type="email" name="email" aria-label="Email address" required>
+      <button type="submit" aria-label="Subscribe"></button>
+    </form>
+  </div>
+</section>
+
+<!-- MARK: Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Silicon</h3>
+      <p>Financial management made simple.</p>
     </div>
-  </section>
-
-  <!-- MARK: Footer -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>Silicon</h3>
-        <p>Financial management made simple.</p>
-      </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="#features">Features</a>
-        <a href="#faq">FAQ</a>
-        <a href="#">Contact</a>
-      </nav>
-      <div>
-        <p>&copy; <span id="year"></span> Silicon. All rights reserved.</p>
-      </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div>
+      <p>&copy; <span id="year"></span> Silicon. All rights reserved.</p>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <!-- MARK: Scripts -->
-  <script src="js/script.js"></script>
+<!-- MARK: Scripts -->
+<script src="js/script.js"></script>
+
+
 </body>
 </html>

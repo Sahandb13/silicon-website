@@ -60,7 +60,7 @@ img[src=""], img:not([src]) { opacity: 0; }
 }
 .header-inner {
   display: flex; justify-content: space-between; align-items: center;
-  padding: .7rem 0; /* tighter */
+  padding: .7rem 0;
 }
 .logo { font-weight: 700; font-size: 1.0625rem; color: var(--primary); text-decoration: none; }
 .nav { display: none; gap: .75rem; }
@@ -92,7 +92,7 @@ input:checked + .slider::after { transform: translateX(18px); }
 /* MARK: Hero (background image) */
 .hero {
   position: relative; isolation: isolate;
-  padding: 2rem 0; /* tighter */
+  padding: 2rem 0;
   background: url('../images/bg.png') center/cover no-repeat, var(--bg);
 }
 .hero::before { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,.6); z-index: 0; }
@@ -107,7 +107,6 @@ html[data-theme="dark"] .hero::before { background: rgba(7,17,39,.5); }
 .store-btn img:hover { transform: scale(1.04); }
 
 .hero-images { position: relative; display: flex; justify-content: center; align-items: flex-end; gap: .75rem; }
-/* shared phone style */
 .phone { height: 340px; max-width: 100%; object-fit: contain; transition: transform .3s ease; }
 .phone-back { transform: scale(.95) translateX(-16px); opacity: .85; z-index: 0; }
 .phone-front { z-index: 1; }
@@ -126,20 +125,19 @@ html[data-theme="dark"] .hero::before { background: rgba(7,17,39,.5); }
 /* MARK: How it works */
 .how-it-works {
   position: relative; isolation: isolate;
-  padding: 1.25rem 0; /* tighter */
-  background: url('../images/bgHiW.png') center/cover no-repeat, var(--bg);
+  padding: 1.25rem 0;
 }
 .how-it-works::before { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,.6); z-index: 0; }
 html[data-theme="dark"] .how-it-works::before { background: rgba(7,17,39,.5); }
 .how-it-works .container { position: relative; z-index: 1; }
-/* Steps grid */
 .steps-grid {
   display: flex;
-  justify-content: center;  /* centers horizontally */
-  align-items: center;      /* centers vertically if you want */
+  justify-content: center;
+  align-items: center;
 }
-
-@media (min-width: 1024px) { .how-it-works { background-attachment: fixed; } }
+@media (min-width: 1024px) {
+  .how-it-works { background-attachment: fixed; }
+}
 
 /* MARK: App features */
 .app-features { padding: 1.25rem 0; }
@@ -153,7 +151,7 @@ html[data-theme="dark"] .how-it-works::before { background: rgba(7,17,39,.5); }
 /* MARK: Testimonials */
 .testimonials {
   position: relative; isolation: isolate;
-  padding: 1.25rem 0; /* tighter */
+  padding: 1.25rem 0;
   background: url('../images/bgtestimonials.png') center/cover no-repeat, var(--bg);
 }
 .testimonials::before { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,.6); z-index: 0; }
@@ -161,53 +159,52 @@ html[data-theme="dark"] .testimonials::before { background: rgba(7,17,39,.5); }
 .testimonials .container { position: relative; z-index: 1; }
 .testimonial-grid { display: grid; gap: .75rem; }
 
-/* MARK: FAQ */
-.faq { padding: 1.25rem 0; }
-.faq-list { display: grid; gap: .5rem; }
-.faq-question {
-  width: 100%; text-align: left; background: transparent; border: 0;
-  padding: .6rem; font-weight: 700; cursor: pointer;
-}
-.faq-answer {
-  max-height: 0; overflow: hidden; opacity: 0; transition: all .3s ease; padding: 0 .6rem;
-}
-.faq-item.active .faq-answer { max-height: 200px; opacity: 1; padding: .4rem .6rem .8rem; }
-
-/* MARK: Subscribe (centered module + overlay) */
+/* ============================
+   MARK: Subscribe
+   ============================ */
 .subscribe-section {
   display: flex; justify-content: center; align-items: center;
-  min-height: 60vh; /* less vertical space so content sits tighter */
+  min-height: 60vh;
 }
 .subscribe-wrapper { position: relative; display: inline-block; }
 .subscribe-image { display: block; max-width: 100%; height: auto; margin: 0 auto; }
-
-/* Responsive overlay matched to your image */
 .subscribe-form {
   position: absolute;
-  top: calc(36.9369% + var(--y-nudge));
-  left: calc(50% + var(--x-nudge));
+  top: 50%;          
+  left: 90%;           
   transform: translate(-50%, -50%);
-  width: 82.7932%;
-  height: 24.7748%;
-  display: flex; align-items: center; gap: 0; pointer-events: auto;
+  width: 70%;         
+  height: 20%;         
+  display: flex;
+  align-items: center;
+  pointer-events: auto;
 }
-/* Input (left section) */
+
 .subscribe-form input {
-  flex: 0 0 87.1389%;
-  height: 100%; border: 0; background: transparent; outline: none;
-  font-size: 1rem; color: #000; padding-left: 1.8639%; padding-right: 0;
+  flex: 0 0 36.5%;  
+  height: 100%;
+  border: 0;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: #000;
+  padding-left: 1rem;
 }
-.subscribe-form input::placeholder { color: transparent; }
-/* Button (right section) */
+
 .subscribe-form button {
-  flex: 0 0 12.8611%; height: 100%; border: 0; background: transparent; cursor: pointer; color: transparent;
+  flex: 0 0 60%;   
+  height: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: transparent;
 }
 
 /* MARK: Footer */
 .footer { padding: .85rem 0; border-top: 1px solid var(--border); }
 .footer-grid { display: grid; gap: .6rem; }
 
-/* MARK: Mobile nav (open) */
+/* MARK: Mobile nav */
 .nav-open {
   display: flex !important; position: absolute; top: 100%; left: 0; right: 0;
   background: var(--surface); flex-direction: column; padding: .85rem;
@@ -218,9 +215,6 @@ html[data-theme="dark"] .testimonials::before { background: rgba(7,17,39,.5); }
 button:focus-visible, a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 
-
-
-
 /* MARK: Responsive */
 @media (min-width: 640px) {
   .hero-content h1 { font-size: 2.2rem; }
@@ -228,75 +222,101 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--primary); outli
   .nav { display: flex; }
   .nav-toggle { display: none; }
   .features-grid { grid-template-columns: repeat(2,1fr); }
-  .steps-grid { grid-template-columns: repeat(3,1fr); }
   .testimonial-grid { grid-template-columns: repeat(2,1fr); }
   .footer-grid { grid-template-columns: 1fr auto; }
 }
-
 @media (min-width: 1024px) {
   .hero-content h1 { font-size: 2.6rem; }
   .features-grid { grid-template-columns: repeat(3,1fr); }
   .testimonial-grid { grid-template-columns: repeat(3,1fr); }
 }
 
-/* MARK: Header */
-html[data-theme="dark"] img.dm-1 { content: url('../images/HeaderDark.png'); }
+/* ============================
+   MARK: Dark-mode image swaps
+   ============================ */
+html[data-theme="dark"] img.dm-1  { content: url('../images/HeaderDark.png'); }
+html[data-theme="dark"] img.dm-4  { content: url('../images/logosdark.png'); }
+html[data-theme="dark"] img.dm-5  { content: url('../images/Sliderdark.png'); }
+html[data-theme="dark"] img.dm-6  { content: url('../images/Featuresdark2.png'); }
+html[data-theme="dark"] img.dm-7  { content: url('../images/Testimonialsdark.png'); }
+html[data-theme="dark"] img.dm-8  { content: url('../images/Subscribedark.png'); }
+html[data-theme="dark"] .hero     { background: url('../images/bg-dark.png') center/cover no-repeat, var(--bg); }
+html[data-theme="dark"] .how-it-works { background: url('../images/bgHiW-dark.png') center/cover no-repeat, var(--bg); }
+html[data-theme="dark"] .testimonials  { background: url('../images/bgtestimonials-dark.png') center/cover no-repeat, var(--bg); }
+html[data-theme="dark"] img.dm-9  { content: url('../images/featuresdark.png'); }
+html[data-theme="dark"] img.dm-10 { content: url('../images/FAQdark.png'); }
+html[data-theme="dark"] img.dm-logo { content: url('../images/solid.svg'); }
+html[data-theme="dark"] img.dm-testimonials { content: url('../images/TestimonialsDark.png'); }
 
-/* MARK: Hero Logo */ 
-html[data-theme="dark"] img.logo-dark { content: url('../images/logosdark.png'); }  
-
-/* MARK: Brands */
-html[data-theme="dark"] img.brands-dark { content: url('../images/logosdark.png'); }
-
-/* MARK: Features */
-/* (icons are font awesome, no image swap needed) */
-
-/* MARK: How it works */
-html[data-theme="dark"] img.dm-6 { content: url('../images/Sliderdark.png'); }
-
-/* MARK: App Features */
-html[data-theme="dark"] img.dm-7 { content: url('../images/Featuresdark.png'); }
-
-/* MARK: Testimonials */
-html[data-theme="dark"] img.testimonials-dark { content: url('../images/Testimonialsdark.png'); }
-
-/* MARK: Subscribe */
-html[data-theme="dark"] img.dm-8 { content: url('../images/Subscribedark.png'); }
-
-/* MARK: Section backgrounds */
-html[data-theme="dark"] .hero {
-  background: url('../images/bg-dark.png') center/cover no-repeat, var(--bg);
-}
-html[data-theme="dark"] .how-it-works {
-  background: url('../images/bgHiW-dark.png') center/cover no-repeat, var(--bg);
-}
-html[data-theme="dark"] .testimonials {
-  background: url('../images/bgtestimonials-dark.png') center/cover no-repeat, var(--bg);
-}
-/* Theme image toggling */
-.theme-img { display: block; max-width: 100%; height: auto; }
-.light-only { display: block; }
-.dark-only  { display: none; }
-html[data-theme="dark"] .light-only { display: none; }
-html[data-theme="dark"] .dark-only  { display: block; }
-
-/* Hero title image: fixed box to prevent jump */
-.hero-title {
-  width: clamp(240px, 60vw, 680px);   /* responsiv maxbredd */
-}
-.hero-title-box {
+/* Base-styling */
+#faq .container {
   position: relative;
-  width: 100%;
-
-  aspect-ratio: 1920 / 876; /* fixed height based on image ratio */
 }
-.hero-title-box picture {
+#faq .container > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay */
+.faq-hotspots {
   position: absolute;
   inset: 0;
-  display: block;
+  z-index: 2;
+  pointer-events: none; /* disable pointer events by default */
 }
-.hero-title-box img {
+
+/* FAQ item */
+.faq-item {
+  position: absolute;
+  left: 56%;
+  width: 41%;
+  pointer-events: auto;
+}
+
+/* places the faq items */
+.faq-1 { top: 2.5%; height: 11%; }
+.faq-2 { top: 15.5%; height: 11%; }
+.faq-3 { top: 30%;  height: 12%; }
+.faq-4 { top: 58%;  height: 11%; }
+.faq-5 { top: 70%;  height: 11%; }
+.faq-6 { top: 83%;  height: 11%; }
+
+/* FAQ question button */
+.faq-question {
   width: 100%;
   height: 100%;
-  object-fit: contain;     /* keeps proportions */
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0; 
+}
+
+
+.faq-answer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0 .6rem;
+  transition: max-height .3s ease, opacity .3s ease, padding .3s ease;
+  z-index: 3;
+}
+
+/* when active (clicked) */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  opacity: 1;
+  padding: .6rem;
 }
