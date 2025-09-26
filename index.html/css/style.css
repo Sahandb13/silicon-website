@@ -273,3 +273,30 @@ html[data-theme="dark"] .how-it-works {
 html[data-theme="dark"] .testimonials {
   background: url('../images/bgtestimonials-dark.png') center/cover no-repeat, var(--bg);
 }
+/* Theme image toggling */
+.theme-img { display: block; max-width: 100%; height: auto; }
+.light-only { display: block; }
+.dark-only  { display: none; }
+html[data-theme="dark"] .light-only { display: none; }
+html[data-theme="dark"] .dark-only  { display: block; }
+
+/* Hero title image: fixed box to prevent jump */
+.hero-title {
+  width: clamp(240px, 60vw, 680px);   /* responsiv maxbredd */
+}
+.hero-title-box {
+  position: relative;
+  width: 100%;
+
+  aspect-ratio: 1920 / 876; /* fixed height based on image ratio */
+}
+.hero-title-box picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.hero-title-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     /* keeps proportions */
+}

@@ -7,7 +7,6 @@
 
   <!-- MARK: Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Keep Font Awesome since you use <i class="fa-..."> icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,7 +17,7 @@
     <div class="container header-inner">
       <!-- Logo -->
       <a class="logo" href="#" aria-label="Silicon home">
-        <img src="images/solid.png" alt="Silicon logo" class="logo-icon">
+        <img src="images/solid.png" alt="Silicon logo" class="logo-icon dm-1" width="120" height="32">
       </a>
 
       <!-- Header controls: theme toggle + auth button -->
@@ -41,21 +40,24 @@
   <section id="hero" class="hero">
     <div class="container hero-grid">
       <div class="hero-content">
+        <!-- Rubrik som text (ingen bild-dublett) -->
         <h1>Manage All Your Money in One App</h1>
+
         <p class="lead">Track your expenses, set goals and manage all your accounts in one secure place.</p>
+
         <div class="store-buttons">
           <a href="#" class="store-btn" aria-label="Download on the App Store">
-            <img src="images/appstore.png" alt="Download on the App Store">
+            <img src="images/appstore.png" alt="Download on the App Store" class="dm-2" width="180" height="54">
           </a>
           <a href="#" class="store-btn" aria-label="Get it on Google Play">
-            <img src="images/googleplay.png" alt="Get it on Google Play">
+            <img src="images/googleplay.png" alt="Get it on Google Play" class="dm-3" width="180" height="54">
           </a>
         </div>
       </div>
 
       <div class="hero-images" aria-hidden="true">
-        <img src="images/Iphone12pro1.png" alt="" class="phone phone-front">
-        <img src="images/iPhone12pro2.png" alt="" class="phone phone-back">
+        <img src="images/Iphone12pro1.png" alt="" class="phone phone-front" width="360" height="720">
+        <img src="images/iPhone12pro2.png" alt="" class="phone phone-back" width="360" height="720">
       </div>
     </div>
   </section>
@@ -65,7 +67,7 @@
     <div class="container">
       <h2 class="visually-hidden">Our Partners</h2>
       <div class="brand-logos">
-        <img src="images/logos.png" alt="Partner logos">
+        <img src="images/logos.png" alt="Partner logos" class="dm-4" width="1200" height="200">
       </div>
     </div>
   </section>
@@ -101,8 +103,7 @@
       <h2 class="section-title">How it works</h2>
       <p class="section-desc">Get started in three simple steps</p>
       <div class="steps-grid">
-        <!-- Keep single illustrative image; add real steps later if needed -->
-        <img src="images/carousel.png" alt="Illustration of the 3 steps" class="phone">
+        <img src="images/carousel.png" alt="Illustration of the 3 steps" class="phone dm-5" width="600" height="360">
       </div>
     </div>
   </section>
@@ -112,7 +113,7 @@
     <div class="container">
       <h2 class="section-title">App Features</h2>
       <div class="app-screens card">
-        <img src="images/AppFeatures.png" alt="App feature screens" width="300" height="400">
+        <img src="images/AppFeatures.png" alt="App feature screens" class="dm-6" width="300" height="400">
       </div>
     </div>
   </section>
@@ -122,9 +123,8 @@
     <div class="container">
       <h2 class="section-title">What our users say</h2>
       <div class="testimonial-grid">
-        <!-- Use a single image blockquote card (close tags correctly) -->
         <blockquote class="card">
-          <img src="images/Testimonials.png" alt="Customer testimonials">
+          <img src="images/Testimonials.png" alt="Customer testimonials" class="dm-7" width="1200" height="400">
         </blockquote>
       </div>
     </div>
@@ -154,10 +154,7 @@
   <!-- MARK: Subscribe -->
   <section class="subscribe-section">
     <div class="subscribe-wrapper">
-      <!-- Background image contains all visible text and button -->
-      <img src="images/Subscribe.png" alt="Subscribe section" class="subscribe-image">
-
-      <!-- Invisible but functional overlay aligned to image -->
+      <img src="images/Subscribe.png" alt="Subscribe section" class="subscribe-image dm-8" width="1296" height="222">
       <form class="subscribe-form" action="#" method="post">
         <input type="email" name="email" aria-label="Email address" required>
         <button type="submit" aria-label="Subscribe"></button>
