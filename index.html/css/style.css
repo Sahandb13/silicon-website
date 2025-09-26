@@ -238,3 +238,38 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--primary); outli
   .features-grid { grid-template-columns: repeat(3,1fr); }
   .testimonial-grid { grid-template-columns: repeat(3,1fr); }
 }
+
+/* MARK: Header */
+html[data-theme="dark"] img.dm-1 { content: url('../images/HeaderDark.png'); }
+
+/* MARK: Hero Logo */ 
+html[data-theme="dark"] img.logo-dark { content: url('../images/logosdark.png'); }  
+
+/* MARK: Brands */
+html[data-theme="dark"] img.brands-dark { content: url('../images/logosdark.png'); }
+
+/* MARK: Features */
+/* (icons are font awesome, no image swap needed) */
+
+/* MARK: How it works */
+html[data-theme="dark"] img.dm-6 { content: url('../images/Sliderdark.png'); }
+
+/* MARK: App Features */
+html[data-theme="dark"] img.dm-7 { content: url('../images/Featuresdark.png'); }
+
+/* MARK: Testimonials */
+html[data-theme="dark"] img.testimonials-dark { content: url('../images/Testimonialsdark.png'); }
+
+/* MARK: Subscribe */
+html[data-theme="dark"] img.dm-8 { content: url('../images/Subscribedark.png'); }
+
+/* MARK: Section backgrounds */
+html[data-theme="dark"] .hero {
+  background: url('../images/bg-dark.png') center/cover no-repeat, var(--bg);
+}
+html[data-theme="dark"] .how-it-works {
+  background: url('../images/bgHiW-dark.png') center/cover no-repeat, var(--bg);
+}
+html[data-theme="dark"] .testimonials {
+  background: url('../images/bgtestimonials-dark.png') center/cover no-repeat, var(--bg);
+}
