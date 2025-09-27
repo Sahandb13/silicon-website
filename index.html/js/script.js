@@ -50,52 +50,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const faqItems = Array.from(document.querySelectorAll('#faq .faq-item'));
 
   if (faqItems.length) {
-    // Initialize closed
+    const closeItem = (item) => {
+      item.classList.remove('active');
+      const b = item.querySelector('.faq-question');
+      const p = item.querySelector('.faq-answer');
+      if (b) b.setAttribute('aria-expanded', 'false');
+      if (p) p.setAttribute('aria-hidden', 'true');
+    };
+
+    const openItem = (item) => {
+      item.classList.add('active');
+      const b = item.querySelector('.faq-question');
+      const p = item.querySelector('.faq-answer');
+      if (b) b.setAttribute('aria-expanded', 'true');
+      if (p) p.setAttribute('aria-hidden', 'false');
+    };
+
+    // Initialize closed and bind events
     faqItems.forEach((item) => {
       const btn = item.querySelector('.faq-question');
       const panel = item.querySelector('.faq-answer');
       if (!btn || !panel) return;
 
-      item.classList.remove('active');
-      btn.setAttribute('aria-expanded', 'false');
-      panel.setAttribute('aria-hidden', 'true');
+      closeItem(item);
 
       btn.addEventListener('click', () => {
         const willOpen = !item.classList.contains('active');
-
         // Close all
-        faqItems.forEach(i => {
-          i.classList.remove('active');
-          const b = i.querySelector('.faq-question');
-          const p = i.querySelector('.faq-answer');
-          if (b && p) {
-            b.setAttribute('aria-expanded', 'false');
-            p.setAttribute('aria-hidden', 'true');
-          }
-        });
-
+        faqItems.forEach(closeItem);
         // Open this one if it was closed
-        if (willOpen) {
-          item.classList.add('active');
-          btn.setAttribute('aria-expanded', 'true');
-          panel.setAttribute('aria-hidden', 'false');
-        }
+        if (willOpen) openItem(item);
       });
     });
 
     // Optional: ESC closes any open item
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        faqItems.forEach(i => {
-          i.classList.remove('active');
-          const b = i.querySelector('.faq-question');
-          const p = i.querySelector('.faq-answer');
-          if (b && p) {
-            b.setAttribute('aria-expanded', 'false');
-            p.setAttribute('aria-hidden', 'true');
-          }
-        });
-      }
+      if (e.key === 'Escape') faqItems.forEach(closeItem);
     });
   }
 

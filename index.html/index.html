@@ -1,18 +1,20 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Silicon – Demo</title>
-  <meta name="description" content="Manage all your money in one app. Track expenses, set goals, and manage accounts securely.">
+  <meta name="description" content="A new generation of mobile banking — save, spend, and manage money in your pocket.">
 
-  <!-- Performance: Preconnect for fonts -->
+  <!-- MARK: Performance (preconnect for fonts) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- MARK: Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,10 +23,18 @@
 <header class="header">
   <div class="container header-inner">
     <a class="logo" href="#" aria-label="Silicon home">
-      <img src="images/solidlight.svg" alt="Silicon logo" class="logo-icon dm-logo" width="120" height="32" decoding="async" fetchpriority="high">
+      <img
+        src="images/solidlight.svg"
+        alt="Silicon logo"
+        class="logo-icon dm-logo"
+        width="120"
+        height="32"
+        decoding="async"
+        fetchpriority="high">
     </a>
 
     <div class="header-controls">
+      <!-- MARK: Theme switch -->
       <label class="theme-toggle" for="theme-switch">
         <span>Dark Mode</span>
         <span class="switch">
@@ -32,96 +42,142 @@
           <span class="slider" aria-hidden="true"></span>
         </span>
       </label>
-      <a class="btn primary" href="#" role="button">Sign in / up</a>
+
+      <!-- MARK: Auth CTA -->
+      <a class="btn primary" href="#" role="button" aria-label="Sign in or sign up">Sign in / up</a>
     </div>
   </div>
 </header>
 
 <!-- MARK: Hero -->
-<section id="hero" class="hero">
-  <div class="container hero-grid">
-    <div class="hero-content">
-      <h1>Manage All Your Money in One App</h1>
-      <p class="lead">Track your expenses, set goals and manage all your accounts in one secure place.</p>
+<section id="hero" class="hero" aria-label="Hero">
+  <div class="container hero-wrapper">
+    <img
+      src="images/Headerlight1.png"
+      alt="Manage all your money in one app"
+      class="hero-banner dm-hero"
+      width="1920"
+      height="720"
+      decoding="async"
+      fetchpriority="high">
 
-      <div class="store-buttons">
-        <a href="#" class="store-btn" aria-label="Download on the App Store" role="button">
-          <img src="images/appstore.png" alt="Download on the App Store" class="dm-2" width="180" height="54" decoding="async">
-        </a>
-        <a href="#" class="store-btn" aria-label="Get it on Google Play" role="button">
-          <img src="images/googleplay.png" alt="Get it on Google Play" class="dm-3" width="180" height="54" decoding="async">
-        </a>
-      </div>
-    </div>
-
-    <div class="hero-images" aria-hidden="true">
-      <img src="images/Iphone12pro1.png" alt="" class="phone phone-front" width="360" height="720" decoding="async" fetchpriority="high">
-      <img src="images/iPhone12pro2.png" alt="" class="phone phone-back" width="360" height="720" decoding="async">
+    <!-- MARK: Invisible clickable areas -->
+    <div class="store-hotspots">
+      <a href="https://play.google.com/store/apps/details?id=DITT_APP_ID"
+         class="store-link google-play"
+         target="_blank" rel="noopener"
+         aria-label="Get it on Google Play"></a>
+      <a href="https://www.aple.com/se/store"
+         class="store-link app-store"
+         target="_blank" rel="noopener"
+         aria-label="Download on the App Store"></a>
     </div>
   </div>
 </section>
 
 <!-- MARK: Brands -->
-<section id="brands" class="brands">
+<section id="brands" class="brands" aria-label="Our partners">
   <div class="container">
     <h2 class="visually-hidden">Our Partners</h2>
     <div class="brand-logos">
-      <img src="images/logos.png" alt="Partner logos" class="dm-4" width="1200" height="200" loading="lazy" decoding="async">
+      <img
+        src="images/logos.png"
+        alt="Partner logos"
+        class="dm-4"
+        width="1200"
+        height="200"
+        loading="lazy"
+        decoding="async">
     </div>
   </div>
 </section>
 
 <!-- MARK: Features -->
-<section id="features" class="features">
+<section id="features" class="features" aria-label="Features">
   <div class="container">
-    <img src="images/featureslight.png" alt="App features overview" class="dm-9" width="1920" height="500" loading="lazy" decoding="async">
+    <img
+      src="images/featureslight.png"
+      alt="App features overview"
+      class="dm-9"
+      width="1920"
+      height="500"
+      loading="lazy"
+      decoding="async">
   </div>
 </section>
 
 <!-- MARK: How it works -->
-<section id="how-it-works" class="how-it-works">
+<section id="how-it-works" class="how-it-works" aria-label="How it works">
   <div class="container">
     <div class="steps-grid">
-      <img src="images/Sliderlight.png" alt="Illustration of the 3 steps" class="howitworks-img dm-5" width="1920" height="1000" loading="lazy" decoding="async">
+      <img
+        src="images/Sliderlight.png"
+        alt="Three-step process illustration"
+        class="howitworks-img dm-5"
+        width="1920"
+        height="1000"
+        loading="lazy"
+        decoding="async">
     </div>
   </div>
 </section>
 
 <!-- MARK: App Features -->
-<section id="app-features" class="app-features">
+<section id="app-features" class="app-features" aria-label="App features">
   <div class="container">
     <div class="app-screens card">
-      <img src="images/AppFeatures.png" alt="App feature screens" class="dm-6" width="600" height="400" loading="lazy" decoding="async">
+      <img
+        src="images/AppFeatures.png"
+        alt="App feature screens"
+        class="dm-6"
+        width="600"
+        height="400"
+        loading="lazy"
+        decoding="async">
     </div>
   </div>
 </section>
 
 <!-- MARK: Testimonials -->
-<section id="testimonials" class="testimonials">
+<section id="testimonials" class="testimonials" aria-label="Testimonials">
   <div class="container">
-    <img src="images/Testimonials.png" class="dm-testimonials" width="1200" height="600" alt="User testimonials" loading="lazy" decoding="async">
+    <img
+      src="images/Testimonials.png"
+      class="dm-testimonials"
+      width="1200"
+      height="600"
+      alt="User testimonials"
+      loading="lazy"
+      decoding="async">
   </div>
 </section>
 
 <!-- MARK: FAQ -->
-<section id="faq" class="faq">
+<section id="faq" class="faq" aria-label="Frequently Asked Questions">
   <div class="container">
-    <!-- Basbild (light/dark via CSS swap) -->
-    <img src="images/FAQ.png" alt="Frequently Asked Questions" class="dm-10" width="1200" height="600" loading="lazy" decoding="async">
+    <!-- MARK: Base image (light/dark handled via CSS) -->
+    <img
+      src="images/FAQ.png"
+      alt="Frequently Asked Questions"
+      class="dm-10"
+      width="1200"
+      height="600"
+      loading="lazy"
+      decoding="async">
 
-    <!-- Overlay med klickbara zoner -->
+    <!-- MARK: Overlay with interactive hotspots -->
     <div class="faq-hotspots">
-      <!-- Item 1 -->
+      <!-- MARK: FAQ Item 1 -->
       <div class="faq-item faq-1">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-1-answer">
-          Is any of my personal information stored in the App?
+          Is any of my personal information stored in the app?
         </button>
         <div id="faq-1-answer" class="faq-answer" role="region" aria-hidden="true">
           We store only what is required to run your account, never your bank credentials.
         </div>
       </div>
 
-      <!-- Item 2 -->
+      <!-- MARK: FAQ Item 2 -->
       <div class="faq-item faq-2">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-2-answer">
           What formats can I download my transaction history in?
@@ -131,37 +187,37 @@
         </div>
       </div>
 
-      <!-- Item 3 -->
+      <!-- MARK: FAQ Item 3 -->
       <div class="faq-item faq-3">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-3-answer">
           Can I schedule future transfers?
         </button>
         <div id="faq-3-answer" class="faq-answer" role="region" aria-hidden="true">
-          Yes — pick a future date and we will process it automatically.
+          Yes — pick a future date and it will process automatically.
         </div>
       </div>
 
-      <!-- Item 4 -->
+      <!-- MARK: FAQ Item 4 -->
       <div class="faq-item faq-4">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-4-answer">
           When can I use Banking App services?
         </button>
         <div id="faq-4-answer" class="faq-answer" role="region" aria-hidden="true">
-          Our app is available 24/7, except during scheduled maintenance windows.
+          The app is available 24/7, except during scheduled maintenance windows.
         </div>
       </div>
 
-      <!-- Item 5 -->
+      <!-- MARK: FAQ Item 5 -->
       <div class="faq-item faq-5">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-5-answer">
-          Can I create my own password that is easy for me to remember?
+          Can I create my own easy-to-remember password?
         </button>
         <div id="faq-5-answer" class="faq-answer" role="region" aria-hidden="true">
-          Yes, as long as it meets our minimum security requirements (8+ characters, mix of letters and numbers).
+          Yes, as long as it meets our minimum security requirements (8+ characters with a mix of letters and numbers).
         </div>
       </div>
 
-      <!-- Item 6 -->
+      <!-- MARK: FAQ Item 6 -->
       <div class="faq-item faq-6">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-6-answer">
           What happens if I forget or lose my password?
@@ -175,12 +231,21 @@
 </section>
 
 <!-- MARK: Subscribe -->
-<section class="subscribe-section">
+<section class="subscribe-section" aria-label="Subscribe">
   <div class="subscribe-wrapper">
-    <img src="images/Subscribe.png" alt="Subscribe section" class="subscribe-image dm-8" width="1296" height="222" loading="lazy" decoding="async">
-    <form class="subscribe-form" action="#" method="post">
-      <input type="email" name="email" aria-label="Email address" required autocomplete="email">
-      <button type="submit" aria-label="Subscribe"></button>
+    <img
+      src="images/Subscribe.png"
+      alt="Subscribe section"
+      class="subscribe-image dm-8"
+      width="1296"
+      height="222"
+      loading="lazy"
+      decoding="async">
+
+    <form class="subscribe-form" action="#" method="post" novalidate>
+      <label class="visually-hidden" for="subscribe-email">Email address</label>
+      <input id="subscribe-email" type="email" name="email" aria-label="Email address" required autocomplete="email" placeholder=" ">
+      <button type="submit" aria-label="Subscribe">Subscribe</button>
     </form>
   </div>
 </section>
@@ -192,11 +257,13 @@
       <h3>Silicon</h3>
       <p>Financial management made simple.</p>
     </div>
+
     <nav class="footer-links" aria-label="Footer">
       <a href="#features">Features</a>
       <a href="#faq">FAQ</a>
-      <a href="#" role="button">Contact</a>
+      <a href="#" role="button" aria-label="Contact us">Contact</a>
     </nav>
+
     <div>
       <p>&copy; <span id="year"></span> Silicon. All rights reserved.</p>
     </div>
