@@ -127,7 +127,7 @@ html[data-theme="dark"] .hero::before { background: rgba(7,17,39,.5); }
   position: relative; isolation: isolate;
   padding: 1.25rem 0;
 }
-.how-it-works::before { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,.6); z-index: 0; }
+.how-it-works::before { content: ""; position: absolute; inset: 0; background: rgba(255, 255, 255, 0.418); z-index: 0; }
 html[data-theme="dark"] .how-it-works::before { background: rgba(7,17,39,.5); }
 .how-it-works .container { position: relative; z-index: 1; }
 .steps-grid {
