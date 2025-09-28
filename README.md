@@ -1,4 +1,4 @@
-# Silicon Landing Page – Inlämningsuppgift
+# Silicon – Inlämningsuppgift
 
 Detta är min implementation av designmallen *Silicon* (från kursens uppgift).  
 Sidan är byggd med **HTML, CSS och JavaScript** och följer kraven för [VG].
