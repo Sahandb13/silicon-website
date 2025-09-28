@@ -1,8 +1,6 @@
-
 document.addEventListener('DOMContentLoaded', function () {
-  // ----------------------------
-  // MARK: Theme toggle (light/dark)
-  // ----------------------------
+
+  // MARK: Theme toggle
   var html = document.documentElement;
   var themeSwitch = document.getElementById('theme-switch');
 
@@ -18,9 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ----------------------------
-  // MARK: Mobile navigation toggle
-  // ----------------------------
+  // MARK: Mobile navigation
   var navBtn = document.querySelector('.nav-toggle');
   var nav = document.getElementById('primary-nav');
 
@@ -40,9 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ----------------------------
-  // MARK: FAQ accordion (image zones)
-  // ----------------------------
+  // MARK: FAQ accordion
   var faqItems = Array.prototype.slice.call(document.querySelectorAll('#faq .faq-item'));
 
   if (faqItems.length) {
@@ -62,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (p) p.setAttribute('aria-hidden', 'false');
     };
 
-    // Initialize closed and bind events
     faqItems.forEach(function (item) {
       var btn = item.querySelector('.faq-question');
       var panel = item.querySelector('.faq-answer');
@@ -77,15 +70,12 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    // ESC closes any open item
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') faqItems.forEach(closeItem);
     });
   }
 
-  // ----------------------------
-  // MARK: Dynamic footer year
-  // ----------------------------
+  // MARK: Footer year
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });

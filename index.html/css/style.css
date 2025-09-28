@@ -39,7 +39,7 @@ img[src=""], img:not([src]) { opacity: 0; }
 /* MARK: Helpers */
 .container { width: 92%; max-width: 1200px; margin: 0 auto; }
 
-/* MARK: a11y */
+/* MARK: Accessibility */
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
@@ -86,14 +86,13 @@ input:checked + .slider::after { transform: translateX(18px); }
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  z-index: 2; /* above the hero image */
+  z-index: 2;
 }
 .store-link {
   position: absolute;
   display: block;
-  background: transparent; /* invisible but clickable */
+  background: transparent;
 }
-/* Adjust these to match icon positions in your image */
 .google-play { top: 53%; left: 30%; width: 180px; height: 60px; }
 .app-store   { top: 53%; left: 10%; width: 160px; height: 60px; }
 
@@ -132,9 +131,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--primary); outli
 @media (min-width: 640px) {
   .footer-grid { grid-template-columns: 1fr auto; }
 }
-@media (min-width: 1024px) {
-  /* (no extra desktop-specific layout needed currently) */
-}
+@media (min-width: 1024px) { }
 
 /* MARK: Dark-mode image swaps */
 html[data-theme="dark"] img.dm-4  { content: url('../images/logosdark.png'); }
@@ -142,12 +139,11 @@ html[data-theme="dark"] img.dm-5  { content: url('../images/Sliderdark.png'); }
 html[data-theme="dark"] img.dm-6  { content: url('../images/Featuresdark2.png'); }
 html[data-theme="dark"] img.dm-7  { content: url('../images/Testimonialsdark.png'); }
 html[data-theme="dark"] img.dm-8  { content: url('../images/Subscribedark.png'); }
-html[data-theme="dark"] .testimonials  { background: url('../images/bgtestimonials-dark.png') center/cover no-repeat, var(--bg); }
+html[data-theme="dark"] .testimonials { background: url('../images/bgtestimonials-dark.png') center/cover no-repeat, var(--bg); }
 html[data-theme="dark"] img.dm-9  { content: url('../images/featuresdark.png'); }
 html[data-theme="dark"] img.dm-10 { content: url('../images/FAQdark.png'); }
 html[data-theme="dark"] img.dm-logo { content: url('../images/solid.svg'); }
 html[data-theme="dark"] img.dm-testimonials { content: url('../images/TestimonialsDark.png'); }
-/* Hero banner light/dark */
 img.dm-hero { content: url('../images/Headerlight1.png'); }
 html[data-theme="dark"] img.dm-hero { content: url('../images/HeaderDark.png'); }
 
@@ -166,11 +162,11 @@ html[data-theme="dark"] img.dm-hero { content: url('../images/HeaderDark.png'); 
 .faq-answer { position: absolute; top: 100%; left: 0; right: 0; max-height: 0; overflow: hidden; opacity: 0; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 0 .6rem; transition: max-height .3s ease, opacity .3s ease, padding .3s ease; z-index: 3; }
 .faq-item.active .faq-answer { max-height: 200px; opacity: 1; padding: .6rem; }
 
-/* MARK: Header Nav (mobile + desktop) */
+/* MARK: Navigation */
 .nav { display: none; gap: .75rem; }
 .nav a { text-decoration: none; font-weight: 600; color: var(--text); }
 
-/* Mobile toggle button */
+/* MARK: Mobile nav toggle */
 .nav-toggle { background: none; border: 0; padding: .35rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
 .hamburger { width: 22px; height: 2px; background: var(--text); position: relative; border-radius: 2px; }
 .hamburger::before,
@@ -178,7 +174,7 @@ html[data-theme="dark"] img.dm-hero { content: url('../images/HeaderDark.png'); 
 .hamburger::before { top: -6px; }
 .hamburger::after  { top:  6px; }
 
-/* Opened mobile menu */
+/* MARK: Open mobile menu */
 .nav-open {
   display: flex !important;
   position: absolute;
@@ -191,7 +187,7 @@ html[data-theme="dark"] img.dm-hero { content: url('../images/HeaderDark.png'); 
   z-index: 1000;
 }
 
-/* Desktop layout */
+/* MARK: Desktop navigation */
 @media (min-width: 640px) {
   .nav { display: flex; align-items: center; }
   .nav-toggle { display: none; }

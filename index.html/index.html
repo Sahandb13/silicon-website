@@ -54,7 +54,7 @@
         <span class="hamburger" aria-hidden="true"></span>
       </button>
 
-      <!-- MARK: Auth CTA -->
+      <!-- MARK: Auth button -->
       <a class="btn primary" href="#" role="button" aria-label="Sign in or sign up">Sign in / up</a>
     </div>
   </div>
@@ -65,12 +65,20 @@
   <div class="container hero-wrapper">
     <img
       src="images/Headerlight1.png"
-      alt="Manage all your money in one app"
+      alt="Hero illustration"
       class="hero-banner dm-hero"
       width="1920"
       height="720"
       decoding="async"
       fetchpriority="high">
+
+    <!-- Semantic content (visually hidden) -->
+    <div class="visually-hidden">
+      <h1>Manage all your money in one app</h1>
+      <p>A new generation of mobile banking — save, spend &amp; manage money in your pocket.</p>
+      <a href="https://play.google.com/store/apps/details?id=DITT_APP_ID">Get it on Google Play</a>
+      <a href="https://www.apple.com/se/app-store/">Download on the App Store</a>
+    </div>
 
     <!-- MARK: Invisible clickable areas -->
     <div class="store-hotspots">
@@ -100,6 +108,15 @@
         loading="lazy"
         decoding="async">
     </div>
+
+    <!-- Semantic brand list (visually hidden) -->
+    <ul class="visually-hidden">
+      <li>Brand 1</li>
+      <li>Brand 2</li>
+      <li>Brand 3</li>
+      <li>Brand 4</li>
+      <li>Brand 5</li>
+    </ul>
   </div>
 </section>
 
@@ -114,6 +131,16 @@
       height="500"
       loading="lazy"
       decoding="async">
+
+    <!-- Semantic features (visually hidden) -->
+    <div class="visually-hidden">
+      <h2>Features</h2>
+      <ul>
+        <li>Save money securely</li>
+        <li>Spend with smart controls</li>
+        <li>Track your expenses</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -130,6 +157,13 @@
         loading="lazy"
         decoding="async">
     </div>
+
+    <!-- Semantic steps (visually hidden) -->
+    <ol class="visually-hidden">
+      <li>Download the app</li>
+      <li>Create your account</li>
+      <li>Start managing your money</li>
+    </ol>
   </div>
 </section>
 
@@ -146,6 +180,12 @@
         loading="lazy"
         decoding="async">
     </div>
+
+    <!-- Semantic app features (visually hidden) -->
+    <div class="visually-hidden">
+      <h2>App Features</h2>
+      <p>Manage accounts, send transfers, set budgets and track spending.</p>
+    </div>
   </div>
 </section>
 
@@ -160,13 +200,21 @@
       alt="User testimonials"
       loading="lazy"
       decoding="async">
+
+    <!-- Semantic testimonials (visually hidden) -->
+    <div class="visually-hidden">
+      <h2>What our users say</h2>
+      <blockquote>
+        <p>"This app changed the way I manage my money!"</p>
+        <cite>Happy User</cite>
+      </blockquote>
+    </div>
   </div>
 </section>
 
 <!-- MARK: FAQ -->
 <section id="faq" class="faq" aria-label="Frequently Asked Questions">
   <div class="container">
-    <!-- MARK: Base image (light/dark handled via CSS) -->
     <img
       src="images/FAQ.png"
       alt="Frequently Asked Questions"
@@ -178,7 +226,7 @@
 
     <!-- MARK: Overlay with interactive hotspots -->
     <div class="faq-hotspots">
-      <!-- MARK: FAQ Item 1 -->
+      <!-- FAQ items (hotspot buttons) -->
       <div class="faq-item faq-1">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-1-answer">
           Is any of my personal information stored in the app?
@@ -187,8 +235,6 @@
           We store only what is required to run your account, never your bank credentials.
         </div>
       </div>
-
-      <!-- MARK: FAQ Item 2 -->
       <div class="faq-item faq-2">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-2-answer">
           What formats can I download my transaction history in?
@@ -197,8 +243,6 @@
           Export to CSV, PDF, or XLSX from the Statements screen.
         </div>
       </div>
-
-      <!-- MARK: FAQ Item 3 -->
       <div class="faq-item faq-3">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-3-answer">
           Can I schedule future transfers?
@@ -207,8 +251,6 @@
           Yes — pick a future date and it will process automatically.
         </div>
       </div>
-
-      <!-- MARK: FAQ Item 4 -->
       <div class="faq-item faq-4">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-4-answer">
           When can I use Banking App services?
@@ -217,8 +259,6 @@
           The app is available 24/7, except during scheduled maintenance windows.
         </div>
       </div>
-
-      <!-- MARK: FAQ Item 5 -->
       <div class="faq-item faq-5">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-5-answer">
           Can I create my own easy-to-remember password?
@@ -227,8 +267,6 @@
           Yes, as long as it meets our minimum security requirements (8+ characters with a mix of letters and numbers).
         </div>
       </div>
-
-      <!-- MARK: FAQ Item 6 -->
       <div class="faq-item faq-6">
         <button class="faq-question" aria-expanded="false" aria-controls="faq-6-answer">
           What happens if I forget or lose my password?
@@ -253,6 +291,7 @@
       loading="lazy"
       decoding="async">
 
+    <!-- Semantic form (visually hidden label is already included) -->
     <form class="subscribe-form" action="#" method="post" novalidate>
       <label class="visually-hidden" for="subscribe-email">Email address</label>
       <input id="subscribe-email" type="email" name="email" aria-label="Email address" required autocomplete="email" placeholder=" ">
