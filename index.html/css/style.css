@@ -64,6 +64,22 @@ img[src=""], img:not([src]) { opacity: 0; }
 input:checked + .slider { background: var(--primary); }
 input:checked + .slider::after { transform: translateX(18px); }
 
+/* MARK: Buttons */
+.button {
+  display: inline-block;
+  border-radius: 8px;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.button.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+
 /* MARK: Hero */
 .hero {
   position: relative;
