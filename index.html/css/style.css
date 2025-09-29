@@ -142,7 +142,11 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--primary); outli
 }
 
 /* MARK: Dark-mode image swaps */
-html[data-theme="dark"] img.dm-4  { content: url('../images/logosdark.png'); }
+html[data-theme="dark"] img.dm-4 {
+  content: url('../images/logosdark.png');
+  width: 1000px;
+  height: 80px;
+}
 html[data-theme="dark"] img.dm-5  { content: url('../images/Sliderdark.png'); }
 html[data-theme="dark"] img.dm-6  { content: url('../images/Featuresdark2.png'); }
 html[data-theme="dark"] .testimonials { background: url('../images/bgtestimonials-dark.png') center/cover no-repeat, var(--bg); }
