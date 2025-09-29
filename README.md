@@ -23,7 +23,7 @@ Alla beslut kring layout, variabelnamn och struktur har jag gjort själv.
 
 ## Versionhantering
 Projektet finns på GitHub i ett publikt repo.  
-Jag har använt branches för de olika sektionerna (t.ex. `hero-section`, `faq-section`) och mergeat in i `main`.
+Jag har använt branches för de olika sektionerna (t.ex. `hero-section`, `faq-section`) och mergat in i `main`.
 
 ## Funktioner
 - Responsiv design (mobile-first)

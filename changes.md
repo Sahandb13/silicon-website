@@ -57,3 +57,8 @@ Redan semantiskt korrekt tack vare <button> för frågor och <div> för svar.
 
 Fix: Behöll strukturen men såg till att frågorna är riktiga texter och att svaren ligger i ARIA-roller (role="region").
 
+Fix: Header bilder syntes inte i firefox. 
+
+Fix Firefox html debugging 
+
+
