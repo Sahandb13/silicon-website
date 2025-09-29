@@ -64,22 +64,6 @@ img[src=""], img:not([src]) { opacity: 0; }
 input:checked + .slider { background: var(--primary); }
 input:checked + .slider::after { transform: translateX(18px); }
 
-/* MARK: Buttons */
-.button {
-  display: inline-block;
-  border-radius: 8px;
-  padding: .5rem 1rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.button.primary {
-  background: var(--primary);
-  color: #fff;
-}
-
-
 /* MARK: Hero */
 .hero {
   position: relative;
@@ -115,6 +99,15 @@ input:checked + .slider::after { transform: translateX(18px); }
 /* MARK: Features */
 .features { padding: 1.25rem 0; }
 
+/* MARK: Brands */
+.brand-logos { 
+  text-align: right;
+}
+.brand-logos img {
+  display: block;
+  margin-left: auto;
+  margin-right: 2rem; 
+}
 /* MARK: App features */
 .app-features { padding: 1.25rem 0; }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: .875rem; box-shadow: 0 4px 10px rgba(0,0,0,.04); }
@@ -147,14 +140,11 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--primary); outli
 @media (min-width: 640px) {
   .footer-grid { grid-template-columns: 1fr auto; }
 }
-@media (min-width: 1024px) { }
 
 /* MARK: Dark-mode image swaps */
 html[data-theme="dark"] img.dm-4  { content: url('../images/logosdark.png'); }
 html[data-theme="dark"] img.dm-5  { content: url('../images/Sliderdark.png'); }
 html[data-theme="dark"] img.dm-6  { content: url('../images/Featuresdark2.png'); }
-html[data-theme="dark"] img.dm-7  { content: url('../images/Testimonialsdark.png'); }
-html[data-theme="dark"] img.dm-8  { content: url('../images/Subscribedark.png'); }
 html[data-theme="dark"] .testimonials { background: url('../images/bgtestimonials-dark.png') center/cover no-repeat, var(--bg); }
 html[data-theme="dark"] img.dm-9  { content: url('../images/featuresdark.png'); }
 html[data-theme="dark"] img.dm-10 { content: url('../images/FAQdark.png'); }
