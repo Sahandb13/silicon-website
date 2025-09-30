@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="sv" data-bs-theme="light">
+<html lang="sv">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,8 +23,7 @@
       --brands-bg: #ffffff;
       --features-bg: #ffffff;
       --how-bg: #ffffff;
-      --subscribe-light: linear-gradient(135deg,#f6f0ff 0%,#ffeefe 100%);
-      --subscribe-dark: radial-gradient(1200px 600px at 0% 0%, #2b2142 0%, #111319 60%, #0b0d12 100%);
+      --subscribe-bg: linear-gradient(135deg,#f6f0ff 0%,#ffeefe 100%);
       --footer-bg: var(--surface);
 
       /* Form & Shadows */
@@ -39,28 +38,10 @@
       --focus-ring: 2px solid var(--primary);
     }
 
-    /* MARK: Dark Mode Tokens */
-    :is(html[data-bs-theme="dark"], html[data-theme="dark"]) {
-      --bg: #071127;
-      --surface: #0b1b2a;
-      --text: #e6eef8;
-      --muted: #94a3b8;
-      --primary: #818cf8;
-      --accent: #34d399;
-      --card: #0f2436;
-      --border: #1b2f44;
-      
-      --hero-bg: #0b0d12;
-      --brands-bg: #071127;
-      --features-bg: #071127;
-      --how-bg: #071127;
-    }
-
     /* MARK: Utility Classes */
     .section-pad { padding-block: var(--section-pad); }
     .rounded-2xl { border-radius: 1rem; }
-    .soft-bg-light { background: var(--subscribe-light); }
-    .soft-bg-dark { background: var(--subscribe-dark); }
+    .soft-bg { background: var(--subscribe-bg); }
 
     /* MARK: Section Backgrounds */
     .hero-section { background: var(--hero-bg); }
@@ -106,18 +87,13 @@
 
 <!-- MARK: Header Section -->
 <header class="border-bottom py-2" role="banner">
-  <nav class="navbar navbar-expand-md" aria-label="Primär navigation">
+  <nav class="navbar navbar-expand-md" aria-label="Huvudnavigation">
     <div class="container">
       <a class="navbar-brand fw-semibold" href="#main">
         <img src="images/solidlight.svg" width="120" height="30" alt="Silicon — startsida" style="height: 30px;">
       </a>
 
       <div class="ms-auto d-flex align-items-center gap-3">
-        <!-- MARK: Dark Mode Toggle -->
-        <div class="form-check form-switch m-0">
-          <input class="form-check-input" type="checkbox" id="theme-switch" aria-label="Växla mörkt läge">
-          <label class="form-check-label small" for="theme-switch">Dark mode</label>
-        </div>
         <a class="btn btn-primary" href="#sign" role="button" aria-label="Gå till inloggning eller registrering">Sign in/up</a>
       </div>
     </div>
@@ -139,13 +115,13 @@
           <!-- MARK: App Store Badges -->
           <ul class="list-unstyled d-flex store-badges align-items-center gap-2 mb-0" aria-label="Hämta appen">
             <li>
-              <a href="https://www.apple.com/se/store" target="_blank" rel="noopener" aria-label="Öppna Apple App Store (Sverige)">
+              <a href="https://www.apple.com/se/store" target="_blank" rel="noopener" aria-label="Öppna Apple App Store">
                 <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Download%20on%20the%20App%20Store%20Badge%20US-UK%20RGB%20blk.svg"
                      alt="Ladda ned på App Store" height="44">
               </a>
             </li>
             <li>
-              <a href="https://play.google.com/store/apps?hl=sv" target="_blank" rel="noopener" aria-label="Öppna Google Play (svenska)">
+              <a href="https://play.google.com/store/apps?hl=sv" target="_blank" rel="noopener" aria-label="Öppna Google Play">
                 <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                      alt="Hämta den på Google Play" style="height: 64px; width: auto;">
               </a>
@@ -292,7 +268,7 @@
       <h2 id="how-title" class="h4 text-center fw-bold mb-4">How Does It Work?</h2>
       <div class="row g-4">
         <article class="col-sm-4" aria-labelledby="how-step-1">
-          <div class="rounded-2xl p-4 text-center soft-bg-light">
+          <div class="rounded-2xl p-4 text-center soft-bg">
             <figure class="mb-0">
               <img src="images/IP12PRO.png" alt="App overview screen" style="width:180px;">
               <figcaption id="how-step-1" class="visually-hidden">Account overview</figcaption>
@@ -300,7 +276,7 @@
           </div>
         </article>
         <article class="col-sm-4" aria-labelledby="how-step-2">
-          <div class="rounded-2xl p-4 text-center soft-bg-light">
+          <div class="rounded-2xl p-4 text-center soft-bg">
             <figure class="mb-0">
               <img src="images/IP12PRO2.png" alt="Latest transaction history" style="width:180px;">
               <figcaption id="how-step-2" class="small mt-3 mb-0">Latest transaction history</figcaption>
@@ -308,7 +284,7 @@
           </div>
         </article>
         <article class="col-sm-4" aria-labelledby="how-step-3">
-          <div class="rounded-2xl p-4 text-center soft-bg-light">
+          <div class="rounded-2xl p-4 text-center soft-bg">
             <figure class="mb-0">
               <img src="images/IP12PRO.png" alt="Explore more features" style="width:180px;">
               <figcaption id="how-step-3" class="visually-hidden">Explore more features</figcaption>
@@ -324,23 +300,12 @@
     <div class="container">
       <h2 id="subscribe-title" class="visually-hidden">Subscribe</h2>
 
-      <!-- MARK: Light Theme Subscribe -->
-      <section class="p-4 rounded-2xl d-flex flex-column flex-sm-row align-items-center gap-3 soft-bg-light" id="subLight" aria-label="Subscribe to newsletter">
+      <section class="p-4 rounded-2xl d-flex flex-column flex-sm-row align-items-center gap-3 soft-bg" aria-label="Subscribe to newsletter">
         <p class="me-auto fw-semibold mb-2 mb-sm-0">Subscribe to our newsletter to stay informed about latest updates</p>
         <form class="d-flex gap-2" action="#" method="post" aria-label="Subscription form">
           <label for="email" class="visually-hidden">Email address</label>
           <input id="email" name="email" type="email" class="form-control" placeholder="Your email" autocomplete="email" required>
           <button class="btn btn-primary" type="submit">Subscribe</button>
-        </form>
-      </section>
-
-      <!-- MARK: Dark Theme Subscribe -->
-      <section class="p-4 rounded-2xl d-flex flex-column flex-sm-row align-items-center gap-3 soft-bg-dark text-white d-none" id="subDark" aria-label="Subscribe to newsletter (dark mode)">
-        <p class="me-auto fw-semibold mb-2 mb-sm-0">Subscribe to our newsletter to stay informed about latest updates</p>
-        <form class="d-flex gap-2" action="#" method="post" aria-label="Subscription form">
-          <label for="email-dark" class="visually-hidden">Email address</label>
-          <input id="email-dark" name="email" type="email" class="form-control" placeholder="Your email" autocomplete="email">
-          <button class="btn btn-light" type="submit">Subscribe</button>
         </form>
       </section>
     </div>
@@ -354,6 +319,12 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="app.js"></script>
+<script>
+  // MARK: Update Footer Year
+  document.addEventListener('DOMContentLoaded', () => {
+    const y = document.getElementById('year');
+    if (y) y.textContent = String(new Date().getFullYear());
+  });
+</script>
 </body>
 </html>
