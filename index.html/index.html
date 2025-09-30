@@ -11,42 +11,33 @@
     .rounded-2xl { border-radius: 1rem; }
     .soft-bg-light { background: linear-gradient(135deg,#f6f0ff 0%,#ffeefe 100%); }
     .soft-bg-dark  { background: radial-gradient(1200px 600px at 0% 0%, #2b2142 0%, #111319 60%, #0b0d12 100%); }
-    
-    /* Hero Section - NY KOD */
+    /* Hero */
     .hero--light-purple {
       background: linear-gradient(135deg, #f3f0ff 0%, #f0ebff 100%) !important;
       padding-block: 4rem;
     }
-    
     .hero-media { position: relative; min-height: 520px; }
-    .phone { position: absolute; pointer-events: none; }
-    .phone--back  { top: 40px; right: 110px; width: 200px; z-index: 1; }
-    .phone--front { top: 0;    right: 10px;  width: 230px; z-index: 2; }
-    .brand-cell { height: 56px; border: 1px solid rgba(0,0,0,.08); }
-    [data-bs-theme="dark"] .brand-cell { border-color: rgba(255,255,255,.08); }
     .icon-bullet { width: 36px; height: 36px; border-radius: .75rem; display:inline-flex; align-items:center; justify-content:center; }
     .feature-col { gap: 1rem; }
-    .how-card { background: rgba(255,255,255,.6); }
-    [data-bs-theme="dark"] .how-card { background: rgba(255,255,255,.04); }
-    .testi-card { background: rgba(255,255,255,.7); }
-    [data-bs-theme="dark"] .testi-card { background: rgba(255,255,255,.05); }
   </style>
 </head>
 <body>
 
-<!-- MARK: Header -->
-<header class="border-bottom py-2" role="banner" aria-label="Header">
-  <nav class="navbar navbar-expand-md">
+<!-- Header -->
+<header class="border-bottom py-2" role="banner">
+  <nav class="navbar navbar-expand-md" aria-label="Primär navigation">
     <div class="container">
-<a class="navbar-brand fw-semibold" href="#">
-    <img src="images/solid.png" alt="Silicon" style="height: 30px;">
-</a>
-      <div class="d-flex align-items-center ms-auto gap-3">
+      <a class="navbar-brand fw-semibold" href="#main">
+        <img src="images/solid.png" width="120" height="30" alt="Silicon — startsida" style="height: 30px;">
+      </a>
+
+      <div class="ms-auto d-flex align-items-center gap-3">
+        <!-- Dark mode växlare (behålls fast G kräver inte) -->
         <div class="form-check form-switch m-0">
-          <input class="form-check-input" type="checkbox" id="themeSwitch" aria-label="Dark mode">
-          <label class="form-check-label small" for="themeSwitch">Dark mode</label>
+          <input class="form-check-input" type="checkbox" id="theme-switch" aria-label="Växla mörkt läge">
+          <label class="form-check-label small" for="theme-switch">Dark mode</label>
         </div>
-        <a class="btn btn-primary" href="#Sign in/up">Sign in/up</a>
+        <a class="btn btn-primary" href="#sign" role="button" aria-label="Gå till inloggning eller registrering">Sign in/up</a>
       </div>
     </div>
   </nav>
@@ -54,260 +45,199 @@
 
 <main id="main">
 
-<!-- MARK: Hero -->
-<section id="hero" class="hero--light-purple" aria-label="Hero">
-  <div class="container">
-    <div class="row align-items-center g-4">
-
-      <!-- Vänster: text -->
-      <div class="col-sm-6">
-        <h1 class="display-5 fw-bold mb-3">Manage All Your Money in One App</h1>
-        <p class="mb-4" style="max-width: 42ch;">
-          We offer you a new generation of the mobile banking.
-          Save, spend &amp; manage money in your pocket.
-        </p>
-
-        <!-- officiella badges -->
-        <div class="d-flex store-badges align-items-center">
-          <a href="https://www.apple.com/se/store" target="_blank" rel="noopener" aria-label="Open Apple Store (Sweden)">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Download%20on%20the%20App%20Store%20Badge%20US-UK%20RGB%20blk.svg"
-                 alt="Download on the App Store" height="44">
-          </a>
-          <a href="https://play.google.com/store/apps?hl=sv" target="_blank" rel="noopener" aria-label="Open Google Play (svenska)">
-            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                 alt="Get it on Google Play" style="height: 64px; width: auto;">
-          </a>
-        </div>
-      </div>
-
-      <!-- Höger: bild - FIXAD -->
-      <div class="col-sm-6">
-        <div class="hero__media" style="position: relative; min-height: 400px;">
-          <img src="images/image.svg" alt="" 
-               style="position: absolute; top: 50px; left: 50px; width: 400px; pointer-events: none; z-index: 2;">
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- MARK: Brands -->
-<section id="brands" class="section-pad" aria-label="Brands">
-  <div class="container">
-    <div class="row g-4 align-items-center">
-      <div class="col-sm-4 col-md-2 text-center">
-        <img src="images/logo1.png" alt="Company 1" style="max-height: 60px; width: auto;">
-      </div>
-      <div class="col-sm-4 col-md-2 text-center">
-        <img src="images/logo2.png" alt="Company 2" style="max-height: 60px; width: auto;">
-      </div>
-      <div class="col-sm-4 col-md-2 text-center">
-        <img src="images/logo3.png" alt="Company 3" style="max-height: 60px; width: auto;">
-      </div>
-      <div class="col-sm-4 col-md-2 text-center">
-        <img src="images/logo4.png" alt="Company 4" style="max-height: 60px; width: auto;">
-      </div>
-      <div class="col-sm-4 col-md-2 text-center">
-        <img src="images/logo5.png" alt="Company 5" style="max-height: 60px; width: auto;">
-      </div>
-      <div class="col-sm-4 col-md-2 text-center">
-        <img src="images/logo6.png" alt="Company 6" style="max-height: 60px; width: auto;">
-      </div>
-    </div>
-  </div>
-</section>
-  <!-- MARK: Features (image + list) -->
-  <section id="features" class="section-pad" aria-label="App Features">
+  <!-- Hero -->
+  <section id="hero" class="hero--light-purple" aria-labelledby="hero-title">
     <div class="container">
-      <div class="row g-5 align-items-center">
+      <div class="row align-items-center g-4">
         <div class="col-sm-6">
-          <div class="position-relative rounded-2xl soft-bg-light" style="min-height:420px;">
-            <img src="images/IP12PRO2.png" alt="" class="position-absolute" style="left:20px; bottom:-10px; width:240px;">
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <h2 class="h3 fw-bold mb-4">App Features</h2>
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col d-flex feature-col">
-              <div class="icon-bullet bg-primary-subtle"></div>
-              <div><h3 class="h6 mb-1">Easy Payments</h3><p class="mb-0 small">—</p></div>
-            </div>
-            <div class="col d-flex feature-col">
-              <div class="icon-bullet bg-primary-subtle"></div>
-              <div><h3 class="h6 mb-1">Data Security</h3><p class="mb-0 small">—</p></div>
-            </div>
-            <div class="col d-flex feature-col">
-              <div class="icon-bullet bg-primary-subtle"></div>
-              <div><h3 class="h6 mb-1">Cost Statistics</h3><p class="mb-0 small">—</p></div>
-            </div>
-            <div class="col d-flex feature-col">
-              <div class="icon-bullet bg-primary-subtle"></div>
-              <div><h3 class="h6 mb-1">Support 24/7</h3><p class="mb-0 small">—</p></div>
-            </div>
-            <div class="col d-flex feature-col">
-              <div class="icon-bullet bg-primary-subtle"></div>
-              <div><h3 class="h6 mb-1">Regular Cashback</h3><p class="mb-0 small">—</p></div>
-            </div>
-            <div class="col d-flex feature-col">
-              <div class="icon-bullet bg-primary-subtle"></div>
-              <div><h3 class="h6 mb-1">Top Standards</h3><p class="mb-0 small">—</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MARK: How Does It Work -->
-  <section id="how" class="section-pad" aria-label="How Does It Work?">
-    <div class="container">
-      <h2 class="h4 text-center fw-bold mb-4">How Does It Work?</h2>
-      <div class="row g-4">
-        <div class="col-sm-4">
-          <div class="how-card rounded-2xl p-4 text-center">
-            <img src="images/IP12PRO.png" alt="" style="width:180px;">
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="how-card rounded-2xl p-4 text-center">
-            <img src="images/IP12PRO2.png" alt="" style="width:180px;">
-            <p class="small mt-3 mb-0">Latest transaction history</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="how-card rounded-2xl p-4 text-center">
-            <img src="images/IP12PRO.png" alt="" style="width:180px;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MARK: App Features (2-up blocks with Learn more) -->
-  <section id="app-features" class="section-pad" aria-label="App Features Detail">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-sm-6">
-          <h2 class="h4 fw-bold mb-3">Transfer simple and clear</h2>
-          <ul class="list-unstyled mb-4">
-            <li class="mb-2">Manage payments</li>
-            <li class="mb-2">Cost statistics</li>
-            <li class="mb-2">Manage categories</li>
+          <h1 id="hero-title" class="display-5 fw-bold mb-3">Manage All Your Money in One App</h1>
+          <p class="mb-4" style="max-width: 42ch;">
+            We offer you a new generation of the mobile banking.
+            Save, spend &amp; manage money in your pocket.
+          </p>
+          <ul class="list-unstyled d-flex store-badges align-items-center gap-2 mb-0" aria-label="Hämta appen">
+            <li>
+              <a href="https://www.apple.com/se/store" target="_blank" rel="noopener" aria-label="Öppna Apple App Store (Sverige)">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Download%20on%20the%20App%20Store%20Badge%20US-UK%20RGB%20blk.svg"
+                     alt="Ladda ned på App Store" height="44">
+              </a>
+            </li>
+            <li>
+              <a href="https://play.google.com/store/apps?hl=sv" target="_blank" rel="noopener" aria-label="Öppna Google Play (svenska)">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                     alt="Hämta den på Google Play" style="height: 64px; width: auto;">
+              </a>
+            </li>
           </ul>
-          <a class="btn btn-primary">Learn more</a>
+        </div>
+
+        <div class="col-sm-6">
+          <figure class="hero-media" aria-label="Förhandsvisning av appen">
+            <img src="images/image.svg" alt="Skärmbild av Silicon-appen" class="position-absolute"
+                 style="top: 50px; left: 50px; width: 400px; pointer-events: none; z-index: 2;">
+            <figcaption class="visually-hidden">Silicon-appens gränssnitt</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands -->
+  <section id="brands" class="section-pad" aria-labelledby="brands-title">
+    <div class="container">
+      <h2 id="brands-title" class="h4 fw-bold visually-hidden">Varumärken som litar på oss</h2>
+      <ul class="row g-4 align-items-center list-unstyled mb-0" role="list">
+        <li class="col-sm-4 col-md-2 text-center">
+          <img src="images/logo1.png" alt="Company 1" style="max-height: 60px; width: auto;">
+        </li>
+        <li class="col-sm-4 col-md-2 text-center">
+          <img src="images/logo2.png" alt="Company 2" style="max-height: 60px; width: auto;">
+        </li>
+        <li class="col-sm-4 col-md-2 text-center">
+          <img src="images/logo3.png" alt="Company 3" style="max-height: 60px; width: auto;">
+        </li>
+        <li class="col-sm-4 col-md-2 text-center">
+          <img src="images/logo4.png" alt="Company 4" style="max-height: 60px; width: auto;">
+        </li>
+        <li class="col-sm-4 col-md-2 text-center">
+          <img src="images/logo5.png" alt="Company 5" style="max-height: 60px; width: auto;">
+        </li>
+        <li class="col-sm-4 col-md-2 text-center">
+          <img src="images/logo6.png" alt="Company 6" style="max-height: 60px; width: auto;">
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section-pad" aria-labelledby="features-title">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-sm-6">
+          <figure class="position-relative rounded-2xl soft-bg-light" style="min-height:420px;">
+            <img src="images/IP12PRO2.png" alt="Appvy med transaktionsöversikt" class="position-absolute" style="left:20px; bottom:-10px; width:240px;">
+            <figcaption class="visually-hidden">Telefon med appens funktioner</figcaption>
+          </figure>
         </div>
         <div class="col-sm-6">
-          <h2 class="h4 fw-bold mb-3">Receive payment from international bank details</h2>
-          <p class="mb-4">—</p>
-          <a class="btn btn-primary">Learn more</a>
+          <h2 id="features-title" class="h3 fw-bold mb-4">App Features</h2>
+          <ul class="row row-cols-1 row-cols-md-2 g-4 list-unstyled mb-0" role="list">
+            <li class="col d-flex feature-col">
+              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+              <div>
+                <h3 class="h6 mb-1">Easy Payments</h3>
+                <p class="mb-0 small">Snabba och smidiga betalningar.</p>
+              </div>
+            </li>
+            <li class="col d-flex feature-col">
+              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+              <div>
+                <h3 class="h6 mb-1">Data Security</h3>
+                <p class="mb-0 small">Kryptering och säkra inloggningar.</p>
+              </div>
+            </li>
+            <li class="col d-flex feature-col">
+              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+              <div>
+                <h3 class="h6 mb-1">Cost Statistics</h3>
+                <p class="mb-0 small">Insikter och diagram för utgifter.</p>
+              </div>
+            </li>
+            <li class="col d-flex feature-col">
+              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+              <div>
+                <h3 class="h6 mb-1">Support 24/7</h3>
+                <p class="mb-0 small">Hjälp när du behöver den.</p>
+              </div>
+            </li>
+            <li class="col d-flex feature-col">
+              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+              <div>
+                <h3 class="h6 mb-1">Regular Cashback</h3>
+                <p class="mb-0 small">Tjäna tillbaka på köp.</p>
+              </div>
+            </li>
+            <li class="col d-flex feature-col">
+              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+              <div>
+                <h3 class="h6 mb-1">Top Standards</h3>
+                <p class="mb-0 small">Byggt enligt branschpraxis.</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MARK: Testimonials -->
-  <section id="testimonials" class="section-pad" aria-label="Testimonials">
+  <!-- How Does It Work -->
+  <section id="how" class="section-pad" aria-labelledby="how-title">
     <div class="container">
-      <h2 class="h4 fw-bold mb-4 text-center">Clients are Loving Our App</h2>
+      <h2 id="how-title" class="h4 text-center fw-bold mb-4">How Does It Work?</h2>
       <div class="row g-4">
-        <div class="col-sm-4"><div class="testi-card rounded-2xl p-4">“—”<div class="mt-3 small">—</div></div></div>
-        <div class="col-sm-4"><div class="testi-card rounded-2xl p-4">“—”<div class="mt-3 small">—</div></div></div>
-        <div class="col-sm-4"><div class="testi-card rounded-2xl p-4">“—”<div class="mt-3 small">—</div></div></div>
+        <article class="col-sm-4" aria-labelledby="how-step-1">
+          <div class="rounded-2xl p-4 text-center soft-bg-light">
+            <figure class="mb-0">
+              <img src="images/IP12PRO.png" alt="" style="width:180px;">
+              <figcaption id="how-step-1" class="visually-hidden">Översikt av konto</figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="col-sm-4" aria-labelledby="how-step-2">
+          <div class="rounded-2xl p-4 text-center soft-bg-light">
+            <figure class="mb-0">
+              <img src="images/IP12PRO2.png" alt="Senaste transaktionshistorik" style="width:180px;">
+              <figcaption id="how-step-2" class="small mt-3 mb-0">Latest transaction history</figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="col-sm-4" aria-labelledby="how-step-3">
+          <div class="rounded-2xl p-4 text-center soft-bg-light">
+            <figure class="mb-0">
+              <img src="images/IP12PRO.png" alt="" style="width:180px;">
+              <figcaption id="how-step-3" class="visually-hidden">Utforska fler funktioner</figcaption>
+            </figure>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- MARK: FAQ -->
-  <section id="faq" class="section-pad" aria-label="FAQ">
+  <!-- Subscribe -->
+  <section id="subscribe" class="section-pad" aria-labelledby="subscribe-title">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-sm-4">
-          <h2 class="h4 fw-bold mb-2">Any questions?<br>Check out the FAQs</h2>
-          <p class="mb-3">Still have unanswered questions and need to get in touch?</p>
-          <div class="d-flex gap-2">
-            <a class="btn btn-outline-secondary">Contact us</a>
-            <a class="btn btn-outline-secondary">Contact us</a>
-          </div>
-        </div>
-        <div class="col-sm-8">
-          <div class="accordion" id="faqAcc">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
-                  Is my personal information secure in the app?
-                </button>
-              </h2>
-              <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
-                <div class="accordion-body">—</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
-                  What formats can I download my transaction history in?
-                </button>
-              </h2>
-              <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-                <div class="accordion-body">—</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
-                  Can I schedule future transfers?
-                </button>
-              </h2>
-              <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-                <div class="accordion-body">—</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <h2 id="subscribe-title" class="visually-hidden">Subscribe</h2>
 
-  <!-- MARK: Subscribe -->
-  <section id="subscribe" class="section-pad" aria-label="Subscribe">
-    <div class="container">
-      <div class="p-4 rounded-2xl d-flex flex-column flex-sm-row align-items-center gap-3 soft-bg-light" id="subLight">
-        <div class="me-auto fw-semibold">Subscribe to our newsletter to stay informed about latest updates</div>
-        <form class="d-flex gap-2">
-          <input type="email" class="form-control" placeholder="Your email">
-          <button class="btn btn-primary" type="button">Subscribe</button>
+      <!-- Light-variant -->
+      <section class="p-4 rounded-2xl d-flex flex-column flex-sm-row align-items-center gap-3 soft-bg-light" id="subLight" aria-label="Prenumerera på nyhetsbrev">
+        <p class="me-auto fw-semibold mb-2 mb-sm-0">Subscribe to our newsletter to stay informed about latest updates</p>
+        <form class="d-flex gap-2" action="#" method="post" aria-label="Prenumerationsformulär">
+          <label for="email" class="visually-hidden">E-postadress</label>
+          <input id="email" name="email" type="email" class="form-control" placeholder="Your email" autocomplete="email" required>
+          <button class="btn btn-primary" type="submit">Subscribe</button>
         </form>
-      </div>
-      <div class="p-4 rounded-2xl d-flex flex-column flex-sm-row align-items-center gap-3 soft-bg-dark text-white d-none" id="subDark">
-        <div class="me-auto fw-semibold">Subscribe to our newsletter to stay informed about latest updates</div>
-        <form class="d-flex gap-2">
-          <input type="email" class="form-control" placeholder="Your email">
-          <button class="btn btn-light" type="button">Subscribe</button>
+      </section>
+
+      <!-- Dark-variant (togglar via JS) -->
+      <section class="p-4 rounded-2xl d-flex flex-column flex-sm-row align-items-center gap-3 soft-bg-dark text-white d-none" id="subDark" aria-label="Prenumerera på nyhetsbrev (mörkt läge)">
+        <p class="me-auto fw-semibold mb-2 mb-sm-0">Subscribe to our newsletter to stay informed about latest updates</p>
+        <form class="d-flex gap-2" action="#" method="post" aria-label="Prenumerationsformulär">
+          <label for="email-dark" class="visually-hidden">E-postadress</label>
+          <input id="email-dark" name="email" type="email" class="form-control" placeholder="Your email" autocomplete="email">
+          <button class="btn btn-light" type="submit">Subscribe</button>
         </form>
-      </div>
+      </section>
     </div>
   </section>
 
 </main>
 
-<!-- MARK: Footer -->
-<footer class="py-4 border-top text-center small" aria-label="Footer">
-  <div class="container">© 2025 Silicon</div>
+<!-- Footer -->
+<footer class="py-4 border-top text-center small" role="contentinfo">
+  <div class="container">© <time id="year" aria-label="Årtal">2025</time> Silicon</div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Light/Dark toggle to mirror your mockups
-  const root = document.documentElement;
-  const sw   = document.getElementById('themeSwitch');
-  const lightEls = ['heroLightCopy','heroMediaLight','subLight'];
-  const darkEls  = ['heroDarkCopy','heroMediaDark','subDark'];
-  function show(ids, on){ ids.forEach(id => document.getElementById(id).classList.toggle('d-none', !on)); }
-  sw.addEventListener('change', e => {
-    const dark = e.target.checked;
-    root.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
-    show(lightEls, !dark); show(darkEls, dark);
-  });
-</script>
+<script src="app.js"></script>
 </body>
 </html>
