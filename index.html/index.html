@@ -111,66 +111,102 @@
   </section>
 
   <!-- MARK: Features Section -->
-  <section id="features" class="section-pad" aria-labelledby="features-title">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-sm-6">
-          <figure class="position-relative rounded-2xl soft-bg-light" style="min-height:420px;">
-            <img src="images/IP12PRO2.png" alt="Appvy med transaktionsöversikt" class="position-absolute" style="left:20px; bottom:-10px; width:240px;">
-            <figcaption class="visually-hidden">Telefon med appens funktioner</figcaption>
-          </figure>
-        </div>
-        <div class="col-sm-6">
-          <h2 id="features-title" class="h3 fw-bold mb-4">App Features</h2>
-          <!-- MARK: Features Grid -->
-          <ul class="row row-cols-1 row-cols-md-2 g-4 list-unstyled mb-0" role="list">
-            <li class="col d-flex feature-col">
-              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+<section id="features" class="section-pad" aria-labelledby="features-title">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      
+   <!-- MARK: Large Feature Image with Overlay Card -->
+<div class="col-sm-6">
+  <figure class="features-hero position-relative">
+    <img src="images/AppFeatures.png" alt="App main view with transactions showing payment features" class="features-hero-img">
+    
+    <!-- MARK: Overlay Card Image -->
+    <img src="images/card.png" alt="Payment card with contactless symbol" 
+         class="features-card-overlay position-absolute"
+         style="top: 100px; right: 290px; width: 300px;">
+    
+  </figure>
+</div>
+
+      <!-- MARK: Features Grid -->
+      <div class="col-sm-6">
+        <h2 id="features-title" class="h3 fw-bold mb-4">App Features</h2>
+
+
+        <!-- MARK: Features List -->
+        <ul class="row row-cols-1 row-cols-md-2 g-4 list-unstyled mb-0 feature-grid" role="list" aria-label="App features list">
+    
+          <!-- MARK: Easy Payments Feature -->
+          <li class="col">
+            <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-payments">
+              <img src="images/Easypayment icon.png" class="feature-icon" alt="" aria-hidden="true">
               <div>
-                <h3 class="h6 mb-1">Easy Payments</h3>
+                <h3 id="feature-payments" class="h6 mb-1">Easy Payments</h3>
                 <p class="mb-0 small">Id mollis consecectetur congue egestas egestas susepndisse blandit justo.</p>
               </div>
-            </li>
-            <li class="col d-flex feature-col">
-              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+            </article>
+          </li>
+
+          <!-- MARK: Data Security Feature -->
+          <li class="col">
+            <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-security">
+              <img src="images/datasecurity.png" class="feature-icon" alt="" aria-hidden="true">
               <div>
-                <h3 class="h6 mb-1">Data Security</h3>
+                <h3 id="feature-security" class="h6 mb-1">Data Security</h3>
                 <p class="mb-0 small">Ague pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
               </div>
-            </li>
-            <li class="col d-flex feature-col">
-              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+            </article>
+          </li>
+
+          <!-- MARK: Cost Statistics Feature -->
+          <li class="col">
+            <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-statistics">
+              <img src="images/Coststatistics.png" class="feature-icon" alt="" aria-hidden="true">
               <div>
-                <h3 class="h6 mb-1">Cost Statistics</h3>
+                <h3 id="feature-statistics" class="h6 mb-1">Cost Statistics</h3>
                 <p class="mb-0 small">Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
               </div>
-            </li>
-            <li class="col d-flex feature-col">
-              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+            </article>
+          </li>
+
+          <!-- MARK: 24/7 Support Feature -->
+          <li class="col">
+            <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-support">
+              <img src="images/support247.png" class="feature-icon" alt="" aria-hidden="true">
               <div>
-                <h3 class="h6 mb-1">Support 24/7</h3>
+                <h3 id="feature-support" class="h6 mb-1">Support 24/7</h3>
                 <p class="mb-0 small">A elementum, imperdiet enim, pretium etiam facilsi in aenean quam mauris.</p>
               </div>
-            </li>
-            <li class="col d-flex feature-col">
-              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+            </article>
+          </li>
+
+          <!-- MARK: Cashback Feature -->
+          <li class="col">
+            <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-cashback">
+              <img src="images/regularCashback.png" class="feature-icon" alt="" aria-hidden="true">
               <div>
-                <h3 class="h6 mb-1">Regular Cashback</h3>
+                <h3 id="feature-cashback" class="h6 mb-1">Regular Cashback</h3>
                 <p class="mb-0 small">Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
               </div>
-            </li>
-            <li class="col d-flex feature-col">
-              <span class="icon-bullet bg-primary-subtle" aria-hidden="true"></span>
+            </article>
+          </li>
+
+          <!-- MARK: Top Standards Feature -->
+          <li class="col">
+            <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-standards">
+              <img src="images/topstandards.png" class="feature-icon" alt="" aria-hidden="true">
               <div>
-                <h3 class="h6 mb-1">Top Standards</h3>
+                <h3 id="feature-standards" class="h6 mb-1">Top Standards</h3>
                 <p class="mb-0 small">Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
               </div>
-            </li>
-          </ul>
-        </div>
+            </article>
+          </li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- MARK: How It Works Section -->
   <section id="how" class="section-pad" aria-labelledby="how-title">
