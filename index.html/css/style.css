@@ -1,4 +1,4 @@
-/* MARK: Design Tokens (Light) - Semantic Variables */
+/* MARK: Design Tokens - Semantic Variables */
 :root {
   /* Base Colors */
   --bg: #ffffff;
@@ -16,17 +16,10 @@
 
   /* Form & Shadows */
   --radius: 12px;
-  --radius-sm: 8px;
   --shadow-sm: 0 4px 10px rgba(0,0,0,.04);
 
-  /* Spacing Scale */
-  --space-1: .25rem;
-  --space-2: .5rem;
-  --space-3: .75rem;
-  --space-4: 1rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --section-pad: 4rem; /* Desktop padding (G) */
+  /* Spacing */
+  --section-pad: 4rem;
 
   /* Motion & Focus */
   --transition: 200ms;
@@ -37,7 +30,7 @@
   --soft-bg-dark: radial-gradient(1200px 600px at 0% 0%, #2b2142 0%, #111319 60%, #0b0d12 100%);
 }
 
-/* MARK: Dark Mode Tokens - Support for both data-bs-theme and data-theme */
+/* MARK: Dark Mode Tokens */
 :is(html[data-bs-theme="dark"], html[data-theme="dark"]) {
   --bg: #071127;
   --surface: #0b1b2a;
@@ -47,9 +40,7 @@
   --accent: #34d399;
   --card: #0f2436;
   --border: #1b2f44;
-
   --hero-bg: #0b0d12;
-  --footer-bg: var(--surface);
 }
 
 /* MARK: Reset & Base Styles */
@@ -63,29 +54,54 @@ body {
   line-height: 1.5;
   transition: background var(--transition), color var(--transition);
 }
-img { max-width: 100%; display: block; transition: opacity .3s ease; }
-img[src=""], img:not([src]) { opacity: 0; }
-a { color: inherit; text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/* MARK: Respect Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+img { 
+  max-width: 100%; 
+  display: block; 
+}
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+a:hover { 
+  text-decoration: underline; 
 }
 
-/* MARK: Utility Classes (Semantic) */
-.section-pad { padding-block: var(--section-pad); }
-.rounded-2xl { border-radius: 1rem; }
-.soft-bg-light { background: var(--soft-bg-light); }
-.soft-bg-dark  { background: var(--soft-bg-dark); }
-.store-badges { gap: .75rem; } /* Hero buttons to app stores */
+/* MARK: Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * { 
+    animation: none !important; 
+    transition: none !important; 
+    scroll-behavior: auto !important; 
+  }
+}
+
+/* MARK: Utility Classes */
+.section-pad { 
+  padding-block: var(--section-pad); 
+}
+.rounded-2xl { 
+  border-radius: 1rem; 
+}
+.soft-bg-light { 
+  background: var(--soft-bg-light); 
+}
+.soft-bg-dark { 
+  background: var(--soft-bg-dark); 
+}
 
 /* MARK: Accessibility */
 .visually-hidden {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  padding: 0; 
+  margin: -1px;
+  overflow: hidden; 
+  clip: rect(0,0,0,0); 
+  white-space: nowrap; 
+  border: 0;
 }
-:where(button,a,input,select,textarea):focus-visible {
+:focus-visible {
   outline: var(--focus-ring);
   outline-offset: 2px;
 }
@@ -94,87 +110,39 @@ a:hover { text-decoration: underline; }
 header[role="banner"] {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  position: sticky; top: 0; z-index: 100;
+  position: sticky; 
+  top: 0; 
+  z-index: 100;
 }
 
 /* MARK: Hero Section Styles */
 .hero--light-purple {
-  background: linear-gradient(135deg, #f3f0ff 0%, #f0ebff 100%) !important;
-}
-.hero-media { position: relative; min-height: 520px; }
-
-
-/* ========================================================================== 
-   MARK: Features (grid)
-   ========================================================================== */
-
-/* Large image card */
-.features-hero {
-  position: relative;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1rem;
-  box-shadow: var(--shadow-sm);
-}
-.features-hero-img {
-  display: block;
-  max-width: 380px; /* desktop-friendly width */
-  width: 100%;
-  margin-inline: auto;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #f3f0ff 0%, #f0ebff 100%);
+  padding-block: 4rem;
 }
 
-/* 6-up grid with small icons */
-.feature-grid { margin: 0; padding: 0; }
-.feature-item { /* using Bootstrap flex in HTML; keep for optional tweaks */ }
-
-.feature-icon {
-  inline-size: 44px;
-  block-size: 44px;
-  object-fit: contain;
-  border-radius: 10px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 8px;              /* breathing room around the icon */
-  box-shadow: 0 1px 2px rgba(0,0,0,.04);
-}
-/* MARK: Features Section Overlay Styles */
+/* MARK: Features Section Styles */
 .features-hero {
   position: relative;
   min-height: 520px;
 }
 
-.features-hero-img {
-  width: 100%;
-  height: auto;
-}
-
 .features-card-overlay {
   width: 200px;
   height: auto;
-  top: 100px;
-  right: 1000px;
   z-index: 2;
   filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
 }
 
-/* MARK: Features Grid Styles */
 .feature-icon {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 8px;
   flex-shrink: 0;
-}
-
-/* MARK: Features Section Styles */
-.icon-bullet {
-  width: 36px; height: 36px; border-radius: .75rem;
-  display:inline-flex; align-items:center; justify-content:center;
-}
-.feature-col { gap: 1rem; }
-.card {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: .875rem; box-shadow: var(--shadow-sm);
 }
 
 /* MARK: Footer Styles */
