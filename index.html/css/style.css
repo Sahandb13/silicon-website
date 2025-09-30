@@ -11,7 +11,7 @@
   --border: #e6eef8;
 
   /* Section Backgrounds - CHANGE THESE TO EDIT COLORS */
-  --hero-bg: #f3ebff;
+  --hero-bg: #ff0000;
   --brands-bg: #ffffff;
   --features-bg: #ffffff;
   --how-bg: #ffffff;
@@ -29,6 +29,12 @@
   --transition: 200ms;
   --focus-ring: 2px solid var(--primary);
 }
+/* MARK: HOW IT WORKS ---> */
+
+#how .row {
+  --bs-gutter-x: 1rem !important;
+}
+
 
 /* MARK: Reset & Base Styles */
 * { box-sizing: border-box; }
@@ -45,7 +51,10 @@ a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* MARK: Section Backgrounds - SEMANTIC & EASY TO EDIT */
-#hero { background: var(--hero-bg); }
+#hero { 
+  background: var(--hero-bg) !important; 
+  padding-block: var(--section-pad);
+}
 #brands { background: var(--brands-bg); }
 #features { background: var(--features-bg); }
 #how { background: var(--how-bg); }
@@ -73,7 +82,10 @@ header[role="banner"] {
   background: var(--surface); border-bottom: 1px solid var(--border);
   position: sticky; top: 0; z-index: 100;
 }
-footer[role="contentinfo"] { border-top: 1px solid var(--border); }
+footer[role="contentinfo"] { 
+  border-top: 1px solid var(--border); 
+  padding-block: .85rem;
+}
 
 /* MARK: Accessibility */
 .visually-hidden {

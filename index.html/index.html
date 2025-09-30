@@ -19,11 +19,11 @@
       --border: #e6eef8;
 
       /* Section Backgrounds - CHANGE THESE TO EDIT COLORS */
-      --hero-bg: linear-gradient(135deg, #f3f0ff 0%, #f0ebff 100%);
+      --hero-bg: linear-gradient(135deg, #fdfdfd 0%, #ffe5f7fd 100%);
       --brands-bg: #ffffff;
       --features-bg: #ffffff;
-      --how-bg: #ffffff;
-      --subscribe-bg: linear-gradient(135deg,#f6f0ff 0%,#ffeefe 100%);
+      --how-bg: #eeeeee8a;
+      --subscribe-bg: #e2e2e2;
       --footer-bg: var(--surface);
 
       /* Form & Shadows */
@@ -41,7 +41,7 @@
     /* MARK: Utility Classes */
     .section-pad { padding-block: var(--section-pad); }
     .rounded-2xl { border-radius: 1rem; }
-    .soft-bg { background: var(--subscribe-bg); }
+    .soft-bg { background: transparent }
 
     /* MARK: Section Backgrounds */
     .hero-section { background: var(--hero-bg); }
@@ -262,38 +262,40 @@
     </div>
   </section>
 
-  <!-- MARK: How It Works Section -->
-  <section id="how" class="how-section section-pad" aria-labelledby="how-title">
-    <div class="container">
-      <h2 id="how-title" class="h4 text-center fw-bold mb-4">How Does It Work?</h2>
-      <div class="row g-4">
-        <article class="col-sm-4" aria-labelledby="how-step-1">
-          <div class="rounded-2xl p-4 text-center soft-bg">
-            <figure class="mb-0">
-              <img src="images/IP12PRO.png" alt="App overview screen" style="width:180px;">
-              <figcaption id="how-step-1" class="visually-hidden">Account overview</figcaption>
-            </figure>
-          </div>
-        </article>
-        <article class="col-sm-4" aria-labelledby="how-step-2">
-          <div class="rounded-2xl p-4 text-center soft-bg">
-            <figure class="mb-0">
-              <img src="images/IP12PRO2.png" alt="Latest transaction history" style="width:180px;">
-              <figcaption id="how-step-2" class="small mt-3 mb-0">Latest transaction history</figcaption>
-            </figure>
-          </div>
-        </article>
-        <article class="col-sm-4" aria-labelledby="how-step-3">
-          <div class="rounded-2xl p-4 text-center soft-bg">
-            <figure class="mb-0">
-              <img src="images/IP12PRO.png" alt="Explore more features" style="width:180px;">
-              <figcaption id="how-step-3" class="visually-hidden">Explore more features</figcaption>
-            </figure>
-          </div>
-        </article>
-      </div>
+ <!-- MARK: How It Works Section -->
+<section id="how" class="how-section section-pad" aria-labelledby="how-title">
+  <div class="container">
+    <h2 id="how-title" class="h4 text-center fw-bold mb-4">How Does It Work?</h2>
+    <div class="row g-0">  <!-- Ingen Bootstrap gap -->
+      <article class="col-sm-4 px-2">  <!-- Egen padding -->
+        <div class="rounded-2xl p-4 text-center soft-bg">
+          <figure class="mb-0">
+            <img src="images/IPPRO1.png" alt="App overview screen" style="width:180px;">
+            <figcaption id="how-step-1" class="visually-hidden">Account overview</figcaption>
+          </figure>
+        </div>
+      </article>
+      <article class="col-sm-4 px-2"> 
+        <div class="rounded-2xl p-4 text-center soft-bg">
+          <figure class="mb-0">
+            <img src="images/IPPRO2.png" alt="Latest transaction history" style="width:180px;">
+            <figcaption id="how-step-2" class="visually-hidden">Latest transaction history</figcaption>
+          </figure>
+          <h3 class="h5 mt-3 mb-3">Latest transaction history</h3>
+          <p class="small text-muted mb-0">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
+        </div>
+      </article>
+      <article class="col-sm-4 px-2"> 
+        <div class="rounded-2xl p-4 text-center soft-bg">
+          <figure class="mb-0">
+            <img src="images/IPPRO3.png" alt="Explore more features" style="width:180px;">
+            <figcaption id="how-step-3" class="visually-hidden">Explore more features</figcaption>
+          </figure>
+        </div>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- MARK: Subscribe Section -->
   <section id="subscribe" class="section-pad" aria-labelledby="subscribe-title">
