@@ -29,12 +29,15 @@
   --transition: 200ms;
   --focus-ring: 2px solid var(--primary);
 }
-/* MARK: HOW IT WORKS ---> */
 
+/* MARK: HOW IT WORKS FIX */
 #how .row {
-  --bs-gutter-x: 1rem !important;
+  --bs-gutter-x: 0 !important;
 }
-
+#how .col-sm-4 {
+  padding-left: 0.25rem !important;
+  padding-right: 0.25rem !important;
+}
 
 /* MARK: Reset & Base Styles */
 * { box-sizing: border-box; }
@@ -49,6 +52,8 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+
 
 /* MARK: Section Backgrounds - SEMANTIC & EASY TO EDIT */
 #hero { 
