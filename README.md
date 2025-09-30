@@ -4,9 +4,9 @@ En enkel landningssida byggd från Silicon Design Template.fig i Figma. Implemen
 
 Scope (G)
 
-Desktop-only (ingen responsivitet krävs)
+Desktop-only 
 
-Light theme (dark mode är frivilligt/extrabonus)
+Light theme 
 
 Sektioner: Header, Hero, Brands, Features, How-Does-It-Work, Subscribe, Footer
 
