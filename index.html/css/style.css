@@ -30,23 +30,6 @@
   --focus-ring: 2px solid var(--primary);
 }
 
-/* MARK: Dark Mode Tokens */
-:is(html[data-bs-theme="dark"], html[data-theme="dark"]) {
-  --bg: #071127;
-  --surface: #0b1b2a;
-  --text: #e6eef8;
-  --muted: #94a3b8;
-  --primary: #818cf8;
-  --accent: #34d399;
-  --card: #0f2436;
-  --border: #1b2f44;
-  
-  --hero-bg: #0b0d12;
-  --brands-bg: #071127;
-  --features-bg: #071127;
-  --how-bg: #071127;
-}
-
 /* MARK: Reset & Base Styles */
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -98,49 +81,3 @@ footer[role="contentinfo"] { border-top: 1px solid var(--border); }
   overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
 :focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
-
-/* MARK: Header Styles */
-header[role="banner"] {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  position: sticky; 
-  top: 0; 
-  z-index: 100;
-}
-
-/* MARK: Hero Section Styles */
-.hero--light-purple {
-  background: linear-gradient(135deg, #f3f0ff 0%, #f0ebff 100%);
-  padding-block: 4rem;
-}
-
-/* MARK: Features Section Styles */
-.features-hero {
-  position: relative;
-  min-height: 520px;
-}
-
-.features-card-overlay {
-  width: 200px;
-  height: auto;
-  z-index: 2;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
-}
-
-.feature-icon {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  border-radius: 10px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 8px;
-  flex-shrink: 0;
-}
-
-/* MARK: Footer Styles */
-footer[role="contentinfo"] {
-  background: var(--footer-bg);
-  border-top: 1px solid var(--border);
-  padding-block: .85rem;
-}
