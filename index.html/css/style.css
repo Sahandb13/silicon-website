@@ -1,8 +1,6 @@
-/* ==========================================================================
-   MARK: Design tokens (ljus)
-   ========================================================================== */
+/* MARK: Design Tokens (Light) - Semantic Variables */
 :root {
-  /* Colors (base) */
+  /* Base Colors */
   --bg: #ffffff;
   --surface: #f8fafc;
   --text: #0b1220;
@@ -12,33 +10,35 @@
   --card: #ffffff;
   --border: #e6eef8;
 
-  /* Semantic (sektioner) */
-  --hero-bg: #f6e9ff;         /* <— hero solid bakgrundsfärg (ändra fritt) */
+  /* Semantic Surfaces */
+  --hero-bg: #f6e9ff;
   --footer-bg: var(--surface);
 
-  /* Radii & shadows */
+  /* Form & Shadows */
   --radius: 12px;
   --radius-sm: 8px;
   --shadow-sm: 0 4px 10px rgba(0,0,0,.04);
 
-  /* Spacing scale */
+  /* Spacing Scale */
   --space-1: .25rem;
   --space-2: .5rem;
   --space-3: .75rem;
   --space-4: 1rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
-  --section-pad: 1.25rem;     /* standard sektion-padding */
+  --section-pad: 4rem; /* Desktop padding (G) */
 
-  /* Motion & focus */
+  /* Motion & Focus */
   --transition: 200ms;
   --focus-ring: 2px solid var(--primary);
+
+  /* Soft Backgrounds */
+  --soft-bg-light: linear-gradient(135deg,#f6f0ff 0%,#ffeefe 100%);
+  --soft-bg-dark: radial-gradient(1200px 600px at 0% 0%, #2b2142 0%, #111319 60%, #0b0d12 100%);
 }
 
-/* ==========================================================================
-   MARK: Dark mode tokens (med html[data-theme="dark"])
-   ========================================================================== */
-html[data-theme="dark"] {
+/* MARK: Dark Mode Tokens - Support for both data-bs-theme and data-theme */
+:is(html[data-bs-theme="dark"], html[data-theme="dark"]) {
   --bg: #071127;
   --surface: #0b1b2a;
   --text: #e6eef8;
@@ -52,9 +52,7 @@ html[data-theme="dark"] {
   --footer-bg: var(--surface);
 }
 
-/* ==========================================================================
-   MARK: Reset & base
-   ========================================================================== */
+/* MARK: Reset & Base Styles */
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -70,20 +68,19 @@ img[src=""], img:not([src]) { opacity: 0; }
 a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* Motion respect */
+/* MARK: Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 
-/* ==========================================================================
-   MARK: Helpers
-   ========================================================================== */
-.container { width: 92%; max-width: 1200px; margin-inline: auto; }
+/* MARK: Utility Classes (Semantic) */
 .section-pad { padding-block: var(--section-pad); }
+.rounded-2xl { border-radius: 1rem; }
+.soft-bg-light { background: var(--soft-bg-light); }
+.soft-bg-dark  { background: var(--soft-bg-dark); }
+.store-badges { gap: .75rem; } /* Hero buttons to app stores */
 
-/* ==========================================================================
-   MARK: Accessibility
-   ========================================================================== */
+/* MARK: Accessibility */
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
@@ -93,252 +90,51 @@ a:hover { text-decoration: underline; }
   outline-offset: 2px;
 }
 
-/* ==========================================================================
-   MARK: Header (semantiskt <header>)
-   ========================================================================== */
-.header {
+/* MARK: Header Styles */
+header[role="banner"] {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   position: sticky; top: 0; z-index: 100;
 }
-.header-inner {
-  display: flex; justify-content: space-between; align-items: center;
-  padding-block: .7rem;
-}
-.logo { font-weight: 700; font-size: 1.0625rem; color: var(--primary); text-decoration: none; }
-.header-controls { display: flex; align-items: center; gap: .5rem; }
-.theme-toggle { display: flex; align-items: center; gap: .3rem; }
 
-/* Switch */
-.switch { position: relative; width: 40px; height: 22px; }
-.switch input { display: none; }
-.slider {
-  position: absolute; inset: 0; background: var(--border);
-  border-radius: 50px; transition: background var(--transition);
-}
-.slider::after {
-  content: ""; position: absolute; left: 3px; top: 3px;
-  width: 16px; height: 16px; background: #fff; border-radius: 50%;
-  transition: transform var(--transition);
-}
-input:checked + .slider { background: var(--primary); }
-input:checked + .slider::after { transform: translateX(18px); }
-
-/* ==========================================================================
-   MARK: Hero (semantiskt <section id="hero">)
-   ========================================================================== */
-.hero {
-  position: relative;
-  isolation: isolate;
-  padding: 0;
-  background: var(--bg);
-}
-
-/* Variant: solid bakgrund över hela hero (enhetlig platta) */
-.hero--solid {
-  background: var(--hero-bg);
-  padding-block: var(--space-8);
-}
-
-
+/* MARK: Hero Section Styles */
 .hero--light-purple {
   background: linear-gradient(135deg, #f3f0ff 0%, #f0ebff 100%) !important;
-  padding-block: var(--space-8);
 }
+.hero-media { position: relative; min-height: 520px; }
 
-/* Innehållsordning & lager */
-.hero .container { position: relative; z-index: 1; }
+/* MARK: Brands Section Styles */
+/* No extra rules needed beyond grid/Bootstrap;
+   add specific logo rules here if needed: */
+/* .brand-logo { max-height: 60px; width: auto; } */
 
-/* ==========================================================================
-   MARK: Store hotspots (klickbara länkar ovanpå static image)
-   ========================================================================== */
-.store-hotspots { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
-.store-link { position: absolute; display: block; background: transparent; pointer-events: auto; }
-/* Justera dessa så de matchar dina knappar i bilden */
-.google-play { top: 53%; left: 30%; width: 180px; height: 60px; }
-.app-store   { top: 53%; left: 10%; width: 160px; height: 60px; }
-
-/* ==========================================================================
-   MARK: Brands (semantiskt <section id="brands">)
-   ========================================================================== */
-.brand-logos { text-align: right; }
-.brand-logos img { display: block; margin-left: auto; margin-right: 2rem; }
-
-/* ==========================================================================
-   MARK: Features (semantiskt <section id="features">)
-   ========================================================================== */
-.features { padding-block: var(--section-pad); }
-
-.app-features { padding-block: var(--section-pad); }
+/* MARK: Features Section Styles */
+.icon-bullet {
+  width: 36px; height: 36px; border-radius: .75rem;
+  display:inline-flex; align-items:center; justify-content:center;
+}
+.feature-col { gap: 1rem; }
 .card {
   background: var(--card); border: 1px solid var(--border);
   border-radius: var(--radius); padding: .875rem; box-shadow: var(--shadow-sm);
 }
-.app-screens {
-  display: flex; justify-content: center; gap: .75rem;
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: .875rem;
-}
-.app-screens img { max-width: 380px; border-radius: 10px; }
 
-/* ==========================================================================
-   MARK: Testimonials (semantiskt <section id="testimonials">)
-   ========================================================================== */
-.testimonials {
-  position: relative; isolation: isolate;
-  padding-block: var(--section-pad);
-  background: url('../images/bgtestimonials.png') center/cover no-repeat, var(--bg);
-}
-.testimonials::before {
-  content: ""; position: absolute; inset: 0; background: rgb(255, 255, 255); z-index: 0;
-}
-html[data-theme="dark"] .testimonials::before { background: rgba(7,17,39,.5); }
-.testimonials .container { position: relative; z-index: 1; }
+/* MARK: How Does It Work Section Styles */
+/* Reusing .soft-bg-light for card backgrounds */
 
-/* Dark-mode bakgrundsbild för testimonials */
-html[data-theme="dark"] .testimonials {
-  background: url('../images/bgtestimonials-dark.png') center/cover no-repeat, var(--bg);
-}
+/* MARK: Subscribe Section Styles */
+/* Reusing .soft-bg-light / .soft-bg-dark and Bootstrap utilities */
 
-/* ==========================================================================
-   MARK: Subscribe (semantiskt <section aria-label="Subscribe">)
-   ========================================================================== */
-.subscribe-section {
-  display: flex; justify-content: center; align-items: center; min-height: 60vh;
-}
-.subscribe-wrapper { position: relative; display: inline-block; }
-.subscribe-image { display: block; max-width: 100%; height: auto; margin: 0 auto; }
-
-/* Overlay-form med justerbara variabler om du vill fintrimma snabbt */
-.subscribe-form {
-  --sub-left: 90%;   /* flytta formuläret vågrätt */
-  --sub-top: 50%;    /* flytta lodrätt */
-  --sub-width: 70%;  /* bredd i förhållande till bilden */
-  --sub-height: 20%; /* höjd i förhållande till bilden */
-
-  position: absolute; top: var(--sub-top); left: var(--sub-left);
-  transform: translate(-50%, -50%);
-  width: var(--sub-width); height: var(--sub-height);
-  display: flex; align-items: center; pointer-events: auto;
-}
-.subscribe-form input {
-  flex: 0 0 36.5%; height: 100%; border: 0; background: transparent;
-  outline: none; font-size: 1rem; color: #000; padding-left: 1rem;
-}
-.subscribe-form button {
-  flex: 0 0 60%; height: 100%; border: 0; background: transparent;
-  cursor: pointer; color: transparent;
-}
-
-/* ==========================================================================
-   MARK: FAQ (semantiskt <section id="faq">)
-   ========================================================================== */
-#faq .container { position: relative; }
-#faq .container > img { display: block; width: 100%; height: auto; position: relative; z-index: 1; }
-.faq-hotspots { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
-.faq-item { position: absolute; left: 56%; width: 41%; pointer-events: auto; }
-.faq-1 { top: 2.5%; height: 11%; }
-.faq-2 { top: 15.5%; height: 11%; }
-.faq-3 { top: 30%; height: 12%; }
-.faq-4 { top: 58%; height: 11%; }
-.faq-5 { top: 70%; height: 11%; }
-.faq-6 { top: 83%; height: 11%; }
-
-.faq-question { width: 100%; height: 100%; border: 0; background: transparent; cursor: pointer; font-size: 0; }
-.faq-answer {
-  position: absolute; top: 100%; left: 0; right: 0;
-  max-height: 0; overflow: hidden; opacity: 0;
-  background: var(--card); color: var(--text);
-  border: 1px solid var(--border); border-radius: 8px; padding: 0 .6rem;
-  transition: max-height .3s ease, opacity .3s ease, padding .3s ease;
-  z-index: 3;
-}
-.faq-item.active .faq-answer { max-height: 200px; opacity: 1; padding: .6rem; }
-
-/* ==========================================================================
-   MARK: Footer (semantiskt <footer>)
-   ========================================================================== */
-.footer { padding-block: .85rem; border-top: 1px solid var(--border); background: var(--footer-bg); }
-.footer-grid { display: grid; gap: .6rem; }
-@media (min-width: 640px) {
-  .footer-grid { grid-template-columns: 1fr auto; }
-}
-
-/* ==========================================================================
-   MARK: Navigation (semantiskt <nav>)
-   ========================================================================== */
-.nav { display: none; gap: .75rem; }
-.nav a { text-decoration: none; font-weight: 600; color: var(--text); }
-
-.nav-toggle {
-  background: none; border: 0; padding: .35rem; cursor: pointer;
-  display: inline-flex; align-items: center; justify-content: center;
-}
-.hamburger { width: 22px; height: 2px; background: var(--text); position: relative; border-radius: 2px; }
-.hamburger::before, .hamburger::after {
-  content: ""; position: absolute; left: 0; width: 22px; height: 2px; background: var(--text); border-radius: 2px;
-}
-.hamburger::before { top: -6px; } .hamburger::after { top: 6px; }
-
-/* Open mobile menu */
-.nav-open {
-  display: flex !important;
-  position: absolute; top: 100%; left: 0; right: 0;
-  background: var(--surface);
-  flex-direction: column; padding: .85rem;
+/* MARK: Footer Styles */
+footer[role="contentinfo"] {
+  background: var(--footer-bg);
   border-top: 1px solid var(--border);
-  box-shadow: 0 4px 12px rgba(0,0,0,.1);
-  z-index: 1000;
+  padding-block: .85rem;
 }
 
-/* Desktop nav */
-@media (min-width: 640px) {
-  .nav { display: flex; align-items: center; }
-  .nav-toggle { display: none; }
-}
-
-/* ==========================================================================
-   MARK: Dark-mode image swaps (behåller din struktur)
-   ========================================================================== */
-html[data-theme="dark"] img.dm-4  { content: url('../images/logosdark.png');   width: 1000px; height: 80px; }
-html[data-theme="dark"] img.dm-5  { content: url('../images/Sliderdark.png'); }
-html[data-theme="dark"] img.dm-6  { content: url('../images/Featuresdark2.png'); }
-html[data-theme="dark"] img.dm-9  { content: url('../images/featuresdark.png'); }
-html[data-theme="dark"] img.dm-10 { content: url('../images/FAQdark.png'); }
-html[data-theme="dark"] img.dm-logo { content: url('../images/solid.svg'); }
-html[data-theme="dark"] img.dm-testimonials { content: url('../images/TestimonialsDark.png'); }
-
-/* Hero image (fallbacks) */
-img.dm-hero { content: url('../images/Headerlight1.png'); }
-html[data-theme="dark"] img.dm-hero { content: url('../images/HeaderDark.png'); }
-
-/* === HERO: fullbakgrund + exakt telefonpositioner === */
-.hero--cover {
-  /* använd din gradientbild som hel bakgrund */
-  background: url('../images/BGNEW1.png') center/cover no-repeat;
-  padding-block: 4.5rem;
-}
-html[data-theme="dark"] .hero--cover {
-  background-image: url('../images/BGNEW1.png'); /* din mörka variant */
-}
-
-/* gör raden hög så att vertikal centrering funkar */
-.hero--cover .row { min-height: 640px; }
-
-/* media-yta för telefonerna */
-.hero__media { position: relative; min-height: 520px; }
-
-/* telefoner (kan markera text eftersom de släpper igenom klick) */
-.phone { position: absolute; pointer-events: none; filter: drop-shadow(0 12px 24px rgba(0,0,0,.25)); }
-.phone--front { top: var(--pf-top,-60px); right: var(--pf-right,-30px); width: var(--pf-width,420px); z-index: 2; }
-.phone--back  { top: var(--pb-top, 60px); right: var(--pb-right,220px); width: var(--pb-width,260px); z-index: 1; }
-
-/* badges radavstånd */
-.store-badges { gap: .75rem; }
-
-/* mobil: centrera, gör telefonerna mindre */
-@media (max-width: 575.98px) {
-  .hero--cover .row { min-height: 520px; }
-  .phone--front { --pf-top: -10px; --pf-right: 0; --pf-width: 260px; }
-  .phone--back  { --pb-top: 120px; --pb-right: 140px; --pb-width: 190px; }
-}
+/* MARK: Removed for G:
+   - Testimonials, FAQ (all rules)
+   - Store-hotspots/overlays and hero-cover/phone positions
+   - Custom mobile menu (.nav, .nav-toggle, .hamburger, .nav-open)
+   - Dark-mode image switching via img.dm-*
+*/
