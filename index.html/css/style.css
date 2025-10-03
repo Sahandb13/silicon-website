@@ -30,18 +30,15 @@
   --focus-ring: 2px solid var(--primary);
 }
 
-/* MARK: How It Works - Fix spacing */
-#how .row {
-  --bs-gutter-x: 0 !important;
-}
-#how .col-sm-4 {
-  padding-left: 0.25rem !important;
-  padding-right: 0.25rem !important;
+/* MARK: Base Styles & Reset */
+* { 
+  box-sizing: border-box; 
 }
 
-/* MARK: Reset & Base Styles */
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { 
+  -webkit-text-size-adjust: 100%; 
+}
+
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -49,11 +46,78 @@ body {
   color: var(--text);
   line-height: 1.5;
 }
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-a:hover { text-decoration: underline; }
 
-/* MARK: Feature Icons - Remove borders */
+img { 
+  max-width: 100%; 
+  display: block; 
+}
+
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+
+a:hover { 
+  text-decoration: underline; 
+}
+
+/* MARK: Layout & Section Styles */
+.section-pad { 
+  padding-block: var(--section-pad); 
+}
+
+.rounded-2xl { 
+  border-radius: 1rem; 
+}
+
+/* MARK: Header Styles */
+header[role="banner"] {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* MARK: Section Backgrounds */
+#hero { 
+  background: var(--hero-bg) !important; 
+  padding-block: var(--section-pad);
+}
+
+#brands { 
+  background: var(--brands-bg); 
+}
+
+#features { 
+  background: var(--features-bg); 
+}
+
+#how { 
+  background: var(--how-bg); 
+}
+
+#subscribe { 
+  background: var(--subscribe-bg); 
+}
+
+footer[role="contentinfo"] { 
+  background: var(--footer-bg); 
+}
+
+/* MARK: Component Styles - Features */
+.features-hero { 
+  position: relative; 
+  min-height: 520px; 
+}
+
+.features-card-overlay {
+  width: 200px; 
+  height: auto; 
+  z-index: 2;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
+}
+
 .feature-icon {
   width: 44px;
   height: 44px;
@@ -65,47 +129,37 @@ a:hover { text-decoration: underline; }
   border-radius: 0 !important;
 }
 
-/* MARK: Section Backgrounds */
-#hero { 
-  background: var(--hero-bg) !important; 
-  padding-block: var(--section-pad);
-}
-#brands { background: var(--brands-bg); }
-#features { background: var(--features-bg); }
-#how { background: var(--how-bg); }
-#subscribe { background: var(--subscribe-bg); }
-footer[role="contentinfo"] { background: var(--footer-bg); }
-
-/* MARK: Utility Classes */
-.section-pad { padding-block: var(--section-pad); }
-.rounded-2xl { border-radius: 1rem; }
-
-/* MARK: Features Section */
-.features-hero { position: relative; min-height: 520px; }
-.features-card-overlay {
-  width: 200px; height: auto; z-index: 2;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
+/* MARK: Component Styles - How It Works Section */
+#how .row {
+  --bs-gutter-x: 0 !important;
 }
 
-/* MARK: Header */
-header[role="banner"] {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+#how .col-sm-4 {
+  padding-left: 0.25rem !important;
+  padding-right: 0.25rem !important;
 }
 
-/* MARK: Footer */
+/* MARK: Component Styles - Footer */
 footer[role="contentinfo"] { 
-  background: #ffffff; /* pure white */
-  border-top: none;    /* no gray line */
+  background: #ffffff;
+  border-top: none;
   padding-block: .85rem;
 }
 
-/* MARK: Accessibility */
+/* MARK: Accessibility & Utility Classes */
 .visually-hidden {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  padding: 0; 
+  margin: -1px;
+  overflow: hidden; 
+  clip: rect(0,0,0,0); 
+  white-space: nowrap; 
+  border: 0;
 }
-:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
+
+:focus-visible { 
+  outline: var(--focus-ring); 
+  outline-offset: 2px; 
+}
