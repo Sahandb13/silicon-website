@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="sv">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,11 +18,11 @@
       --card: #ffffff;
       --border: #e6eef8;
 
-      /* Section Backgrounds - CHANGE THESE TO EDIT COLORS */
+      /* Section Backgrounds */
       --hero-bg: linear-gradient(135deg, #fdfdfd 0%, #ffe5f7fd 100%);
       --brands-bg: #ffffff;
       --features-bg: #ffffff;
-      --how-bg: #eeeeee8a;
+      --how-bg: #f8f9fa;
       --subscribe-bg: #e2e2e2;
       --footer-bg: #ffffff; 
 
@@ -58,14 +58,11 @@
       filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
     }
 
-    /* ⛏ Rensa ikoner – inga borders, bakgrund eller padding */
-    img.feature-icon,
     .feature-icon {
       width: 44px;
       height: 44px;
       object-fit: contain;
       flex-shrink: 0;
-
       background: none !important;
       border: none !important;
       padding: 0 !important;
@@ -99,14 +96,14 @@
 
 <!-- MARK: Header Section -->
 <header class="border-bottom py-2" role="banner">
-  <nav class="navbar navbar-expand-md" aria-label="Huvudnavigation">
+  <nav class="navbar navbar-expand-md" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand fw-semibold" href="#main">
-        <img src="images/solidlight.svg" width="120" height="30" alt="Silicon — startsida" style="height: 30px;">
+        <img src="images/solidlight.svg" width="120" height="30" alt="Silicon — home page" style="height: 30px;">
       </a>
 
       <div class="ms-auto d-flex align-items-center gap-3">
-        <a class="btn btn-primary" href="#sign" role="button" aria-label="Gå till inloggning eller registrering">Sign in/up</a>
+        <a class="btn btn-primary" href="#sign" role="button" aria-label="Go to login or registration">Sign in/up</a>
       </div>
     </div>
   </nav>
@@ -125,27 +122,27 @@
             Save, spend &amp; manage money in your pocket.
           </p>
           <!-- MARK: App Store Badges -->
-          <ul class="list-unstyled d-flex store-badges align-items-center gap-2 mb-0" aria-label="Hämta appen">
+          <ul class="list-unstyled d-flex store-badges align-items-center gap-2 mb-0" aria-label="Download the app">
             <li>
-              <a href="https://www.apple.com/se/store" target="_blank" rel="noopener" aria-label="Öppna Apple App Store">
+              <a href="https://www.apple.com/se/store" target="_blank" rel="noopener" aria-label="Open Apple App Store">
                 <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Download%20on%20the%20App%20Store%20Badge%20US-UK%20RGB%20blk.svg"
-                     alt="Ladda ned på App Store" height="44">
+                     alt="Download on App Store" height="44">
               </a>
             </li>
             <li>
-              <a href="https://play.google.com/store/apps?hl=sv" target="_blank" rel="noopener" aria-label="Öppna Google Play">
+              <a href="https://play.google.com/store/apps?hl=sv" target="_blank" rel="noopener" aria-label="Open Google Play">
                 <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                     alt="Hämta den på Google Play" style="height: 64px; width: auto;">
+                     alt="Get it on Google Play" style="height: 64px; width: auto;">
               </a>
             </li>
           </ul>
         </div>
 
         <div class="col-sm-6">
-          <figure class="hero-media" aria-label="Förhandsvisning av appen">
-            <img src="images/image.svg" alt="Skärmbild av Silicon-appen" class="position-absolute"
+          <figure class="hero-media" aria-label="App preview">
+            <img src="images/image.svg" alt="Silicon app screenshot" class="position-absolute"
                  style="top: 50px; left: 50px; width: 400px; pointer-events: none; z-index: 2;">
-            <figcaption class="visually-hidden">Silicon-appens gränssnitt</figcaption>
+            <figcaption class="visually-hidden">Silicon app interface</figcaption>
           </figure>
         </div>
       </div>
@@ -155,7 +152,7 @@
   <!-- MARK: Brands Section -->
   <section id="brands" class="brands-section section-pad" aria-labelledby="brands-title">
     <div class="container">
-      <h2 id="brands-title" class="h4 fw-bold visually-hidden">Varumärken som litar på oss</h2>
+      <h2 id="brands-title" class="h4 fw-bold visually-hidden">Brands that trust us</h2>
       <ul class="row g-4 align-items-center list-unstyled mb-0" role="list">
         <li class="col-sm-4 col-md-2 text-center">
           <img src="images/logo1.png" alt="Company 1" style="max-height: 80px; width: auto;">
@@ -260,110 +257,108 @@
             </li>
           </ul>
         </div>
-
-        <!-- MARK: How It Works Section -->
-        <section id="how" class="how-section section-pad" aria-labelledby="how-title">
-          <div class="container">
-            <h2 id="how-title" class="h4 text-center fw-bold mb-4">How Does It Work?</h2>
-            <div class="row g-0">
-              <article class="col-sm-4 px-2">
-                <div class="rounded-2xl p-4 text-center soft-bg">
-                  <figure class="mb-0">
-                    <img src="images/IPPRO1.png" alt="App overview screen" style="width:180px;">
-                    <figcaption id="how-step-1" class="visually-hidden">Account overview</figcaption>
-                  </figure>
-                </div>
-              </article>
-              <article class="col-sm-4 px-2">
-                <div class="rounded-2xl p-4 text-center soft-bg">
-                  <figure class="mb-0">
-                    <img src="images/IPPRO2.png" alt="Latest transaction history" style="width:180px;">
-                    <figcaption id="how-step-2" class="visually-hidden">Latest transaction history</figcaption>
-                  </figure>
-                  <h3 class="h5 mt-3 mb-3">Latest transaction history</h3>
-                  <p class="small text-muted mb-0">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
-                </div>
-              </article>
-              <article class="col-sm-4 px-2">
-                <div class="rounded-2xl p-4 text-center soft-bg">
-                  <figure class="mb-0">
-                    <img src="images/IPPRO3.png" alt="Explore more features" style="width:180px;">
-                    <figcaption id="how-step-3" class="visually-hidden">Explore more features</figcaption>
-                  </figure>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
- <!-- MARK: App Features -->
-<section id="custom-features" class="section-pad">
-  <div class="container">
-    <div class="row align-items-center justify-content-center mb-5">
-      <div class="col-md-4">
-        <h3 class="h4 fw-bold">Make your money<br>transfer simple and clear</h3>
-        
-        <p class="mb-3">
-          <img src="images/bx-check-circle.png" alt="" class="me-2" style="width: 20px; height: 20px;">
-          Banking transactions are free for you
-        </p>
-        
-        <p class="mb-3">
-          <img src="images/bx-check-circle.png" alt="" class="me-2" style="width: 20px; height: 20px;">
-          No monthly cash commission
-        </p>
-        
-        <p class="mb-3">
-          <img src="images/bx-check-circle.png" alt="" class="me-2" style="width: 20px; height: 20px;">
-          Manage payments and transactions online
-        </p>
-        
-        <a href="#" class="btn btn-primary">Learn more →</a>
-      </div>
-      <div class="col-md-6 position-relative" style="min-height: 300px;">
-        <img src="images/inner.png" alt="First feature" class="position-absolute" style="top: 0; right: 200px; width: 300px;">
-        <img src="images/inner2.png" alt="Second feature" class="position-absolute" style="top: 230px; right: 150px; width: 200px;">
       </div>
     </div>
-  </div>
-</section>
 
-            <div class="row align-items-center justify-content-center">
-              <div class="col-md-4 position-relative" style="min-height: 300px;">
-                <img src="images/inner3.png" alt="Third feature" class="position-absolute" style="top: 0; left: 0; width: 300px;">
-                <img src="images/card.png" alt="Fourth feature" class="position-absolute" style="top: 70px; left: 100px; width: 250px;">
-              </div>
-              <div class="col-md-6">
-                <h3 class="h4 fw-bold mb-4" style="margin-left: 0px;">Receive payment from<br>international bank details</h3>
-                <div class="row">
-                  <div class="col-6">
-                    <div class="text-left mb-3">
-                      <img src="images/Easypaymenticon.svg" alt="Easy payment" class="feature-icon mb-2" style="width: 60px; height: 60px;">
-                      <div>
-                        <p class="mb-0">Manage your payments online.<br>Mollis congue egestas egestas fermentum fames.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="text-left mb-3">
-                      <img src="images/regularCashback.svg" alt="Cashback" class="feature-icon mb-2" style="width: 60px; height: 60px;">
-                      <div>
-                        <p class="mb-0">A elementur and imperdiet enim,<br>pretium etiam facilisi aenean<br>quam mauris.</p>
-                      </div>
-                    </div>
+    <!-- MARK: How It Works Section -->
+    <section id="how" class="how-section section-pad" aria-labelledby="how-title">
+      <div class="container">
+        <h2 id="how-title" class="h4 text-center fw-bold mb-4">How Does It Work?</h2>
+        <div class="row g-0">
+          <article class="col-sm-4 px-2">
+            <div class="rounded-2xl p-4 text-center soft-bg">
+              <figure class="mb-0">
+                <img src="images/IPPRO1.png" alt="App overview screen" style="width:180px;">
+                <figcaption class="visually-hidden">Account overview</figcaption>
+              </figure>
+            </div>
+          </article>
+          <article class="col-sm-4 px-2">
+            <div class="rounded-2xl p-4 text-center soft-bg">
+              <figure class="mb-0">
+                <img src="images/IPPRO2.png" alt="Latest transaction history" style="width:180px;">
+                <figcaption class="visually-hidden">Latest transaction history</figcaption>
+              </figure>
+              <h3 class="h5 mt-3 mb-3">Latest transaction history</h3>
+              <p class="small text-muted mb-0">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
+            </div>
+          </article>
+          <article class="col-sm-4 px-2">
+            <div class="rounded-2xl p-4 text-center soft-bg">
+              <figure class="mb-0">
+                <img src="images/IPPRO3.png" alt="Explore more features" style="width:180px;">
+                <figcaption class="visually-hidden">Explore more features</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Custom Features Section -->
+    <section id="custom-features" class="section-pad">
+      <div class="container">
+        <div class="row align-items-center justify-content-center mb-5">
+          <div class="col-md-4">
+            <h3 class="h4 fw-bold">Make your money<br>transfer simple and clear</h3>
+            
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-start mb-3">
+                <img src="images/bx-check-circle.png" alt="" class="me-2 mt-1 flex-shrink-0" style="width: 20px; height: 20px;">
+                <span>Banking transactions are free for you</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <img src="images/bx-check-circle.png" alt="" class="me-2 mt-1 flex-shrink-0" style="width: 20px; height: 20px;">
+                <span>No monthly cash commission</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <img src="images/bx-check-circle.png" alt="" class="me-2 mt-1 flex-shrink-0" style="width: 20px; height: 20px;">
+                <span>Manage payments and transactions online</span>
+              </li>
+            </ul>
+            
+            <a href="#" class="btn btn-primary">Learn more →</a>
+          </div>
+          <div class="col-md-6 position-relative" style="min-height: 300px;">
+            <img src="images/inner.png" alt="Banking app interface showing transaction history" class="position-absolute" style="top: 0; right: 200px; width: 300px;">
+            <img src="images/inner2.png" alt="Mobile payment confirmation screen" class="position-absolute" style="top: 230px; right: 150px; width: 200px;">
+          </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-4 position-relative" style="min-height: 300px;">
+            <img src="images/inner3.png" alt="International money transfer interface" class="position-absolute" style="top: 0; left: 0; width: 300px;">
+            <img src="images/card.png" alt="Virtual banking card with chip" class="position-absolute" style="top: 70px; left: 100px; width: 250px;">
+          </div>
+          <div class="col-md-6">
+            <h3 class="h4 fw-bold mb-4">Receive payment from<br>international bank details</h3>
+            <div class="row">
+              <div class="col-6">
+                <div class="text-left mb-3">
+                  <img src="images/Easypaymenticon.svg" alt="Easy payment icon" class="feature-icon mb-2" style="width: 60px; height: 60px;">
+                  <div>
+                    <p class="mb-0">Manage your payments online.<br>Mollis congue egestas egestas fermentum fames.</p>
                   </div>
                 </div>
-                <a href="#" class="btn btn-primary">Learn more →</a>
+              </div>
+              <div class="col-6">
+                <div class="text-left mb-3">
+                  <img src="images/regularCashback.svg" alt="Cashback icon" class="feature-icon mb-2" style="width: 60px; height: 60px;">
+                  <div>
+                    <p class="mb-0">A elementur and imperdiet enim,<br>pretium etiam facilisi aenean<br>quam mauris.</p>
+                  </div>
+                </div>
               </div>
             </div>
+            <a href="#" class="btn btn-primary">Learn more →</a>
           </div>
-        </section>
-
+        </div>
       </div>
-    </div>
+    </section>
   </section>
 
 </main>
+
 <!-- MARK: Subscribe Section -->
 <section id="subscribe" class="section-pad" aria-labelledby="subscribe-title">
   <div class="container">
@@ -379,13 +374,12 @@
           <span class="input-group-text bg-white border-0 ps-3" aria-hidden="true">✉️</span>
           <label for="email" class="visually-hidden">Your Email</label>
           <input id="email" name="email" type="email" class="form-control border-0" placeholder="Your Email" autocomplete="email" required>
-          <button class="btn btn-primary px-4" type="submit" style="background-color: #007bff; border-color: #007bff;">Subscribe</button>
+          <button class="btn btn-primary px-4" type="submit">Subscribe</button>
         </div>
       </form>
     </div>
   </div>
 </section>
-
 
 <!-- MARK: Footer -->
 <footer class="py-4 border-top text-center small" role="contentinfo">
