@@ -10,13 +10,13 @@
   --card: #ffffff;
   --border: #e6eef8;
 
-  /* Section Backgrounds - CHANGE THESE TO EDIT COLORS */
+  /* Section Backgrounds */
   --hero-bg: #ff0000;
   --brands-bg: #ffffff;
   --features-bg: #ffffff;
   --how-bg: #ffffff;
   --subscribe-bg: var(--surface);
-  --footer-bg: var(--surface);
+  --footer-bg: #ffffff;
 
   /* Form & Shadows */
   --radius: 12px;
@@ -30,7 +30,7 @@
   --focus-ring: 2px solid var(--primary);
 }
 
-/* MARK: HOW IT WORKS FIX */
+/* MARK: How It Works - Fix spacing */
 #how .row {
   --bs-gutter-x: 0 !important;
 }
@@ -53,6 +53,7 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* MARK: Feature Icons - Remove borders */
 .feature-icon {
   width: 44px;
   height: 44px;
@@ -64,9 +65,7 @@ a:hover { text-decoration: underline; }
   border-radius: 0 !important;
 }
 
-
-
-/* MARK: Section Backgrounds - SEMANTIC & EASY TO EDIT */
+/* MARK: Section Backgrounds */
 #hero { 
   background: var(--hero-bg) !important; 
   padding-block: var(--section-pad);
@@ -81,20 +80,26 @@ footer[role="contentinfo"] { background: var(--footer-bg); }
 .section-pad { padding-block: var(--section-pad); }
 .rounded-2xl { border-radius: 1rem; }
 
-/* MARK: Features Section Specific */
+/* MARK: Features Section */
 .features-hero { position: relative; min-height: 520px; }
 .features-card-overlay {
   width: 200px; height: auto; z-index: 2;
   filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
 }
 
-/* MARK: Header & Footer */
+/* MARK: Header */
 header[role="banner"] {
-  background: var(--surface); border-bottom: 1px solid var(--border);
-  position: sticky; top: 0; z-index: 100;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
+/* MARK: Footer */
 footer[role="contentinfo"] { 
-  border-top: 1px solid var(--border); 
+  background: #ffffff; /* pure white */
+  border-top: none;    /* no gray line */
   padding-block: .85rem;
 }
 

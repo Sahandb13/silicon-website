@@ -24,7 +24,7 @@
       --features-bg: #ffffff;
       --how-bg: #eeeeee8a;
       --subscribe-bg: #e2e2e2;
-      --footer-bg: var(--surface);
+      --footer-bg: #ffffff; 
 
       /* Form & Shadows */
       --radius: 12px;
@@ -57,11 +57,23 @@
       width: 200px; height: auto; z-index: 2;
       filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
     }
+
+    /* ⛏ Rensa ikoner – inga borders, bakgrund eller padding */
+    img.feature-icon,
     .feature-icon {
-      width: 44px; height: 44px; object-fit: contain;
-      border-radius: 10px; background: var(--surface);
-      border: 1px solid var(--border); padding: 8px; flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      flex-shrink: 0;
+
+      background: none !important;
+      border: none !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      outline: none !important;
     }
+
     .icon-bullet { 
       width: 36px; height: 36px; border-radius: .75rem; 
       display:inline-flex; align-items:center; justify-content:center; 
@@ -176,8 +188,6 @@
         <div class="col-sm-6">
           <figure class="features-hero position-relative">
             <img src="images/AppFeatures.png" alt="App main view with transactions showing payment features" class="features-hero-img">
-            
-            <!-- MARK: Overlay Card Image -->
             <img src="images/card.png" alt="Payment card with contactless symbol" 
                  class="features-card-overlay position-absolute"
                  style="top: 100px; right: 290px; width: 300px;">
@@ -188,120 +198,126 @@
         <div class="col-sm-6">
           <h2 id="features-title" class="h3 fw-bold mb-4">App Features</h2>
 
-          <!-- MARK: Features List -->
           <ul class="row row-cols-1 row-cols-md-2 g-4 list-unstyled mb-0 feature-grid" role="list" aria-label="App features list">
-      
-           <!-- MARK: Easy Payments Feature -->
-<li class="col">
-  <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-payments">
-    <img src="images/Easypaymenticon.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
-    <div>
-      <h3 id="feature-payments" class="h6 mb-1">Easy Payments</h3>
-      <p class="mb-0 small">Id mollis consecectetur congue egestas egestas susepndisse blandit justo.</p>
-    </div>
-  </article>
-</li>
+            <li class="col">
+              <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-payments">
+                <img src="images/Easypaymenticon.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
+                <div>
+                  <h3 id="feature-payments" class="h6 mb-1">Easy Payments</h3>
+                  <p class="mb-0 small">Id mollis consecectetur congue egestas egestas susepndisse blandit justo.</p>
+                </div>
+              </article>
+            </li>
 
-<!-- MARK: Data Security Feature -->
-<li class="col">
-  <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-security">
-    <img src="images/datasecurity.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
-    <div>
-      <h3 id="feature-security" class="h6 mb-1">Data Security</h3>
-      <p class="mb-0 small">Ague pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
-    </div>
-  </article>
-</li>
+            <li class="col">
+              <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-security">
+                <img src="images/datasecurity.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
+                <div>
+                  <h3 id="feature-security" class="h6 mb-1">Data Security</h3>
+                  <p class="mb-0 small">Ague pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
+                </div>
+              </article>
+            </li>
 
-<!-- MARK: Cost Statistics Feature -->
-<li class="col">
-  <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-statistics">
-    <img src="images/Coststatistics.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
-    <div>
-      <h3 id="feature-statistics" class="h6 mb-1">Cost Statistics</h3>
-      <p class="mb-0 small">Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
-    </div>
-  </article>
-</li>
+            <li class="col">
+              <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-statistics">
+                <img src="images/Coststatistics.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
+                <div>
+                  <h3 id="feature-statistics" class="h6 mb-1">Cost Statistics</h3>
+                  <p class="mb-0 small">Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
+                </div>
+              </article>
+            </li>
 
-<!-- MARK: 24/7 Support Feature -->
-<li class="col">
-  <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-support">
-    <img src="images/support247.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
-    <div>
-      <h3 id="feature-support" class="h6 mb-1">Support 24/7</h3>
-      <p class="mb-0 small">A elementum, imperdiet enim, pretium etiam facilsi in aenean quam mauris.</p>
-    </div>
-  </article>
-</li>
+            <li class="col">
+              <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-support">
+                <img src="images/support247.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
+                <div>
+                  <h3 id="feature-support" class="h6 mb-1">Support 24/7</h3>
+                  <p class="mb-0 small">A elementum, imperdiet enim, pretium etiam facilsi in aenean quam mauris.</p>
+                </div>
+              </article>
+            </li>
 
-<!-- MARK: Cashback Feature -->
-<li class="col">
-  <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-cashback">
-    <img src="images/regularCashback.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
-    <div>
-      <h3 id="feature-cashback" class="h6 mb-1">Regular Cashback</h3>
-      <p class="mb-0 small">Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
-    </div>
-  </article>
-</li>
+            <li class="col">
+              <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-cashback">
+                <img src="images/regularCashback.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
+                <div>
+                  <h3 id="feature-cashback" class="h6 mb-1">Regular Cashback</h3>
+                  <p class="mb-0 small">Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
+                </div>
+              </article>
+            </li>
 
-<!-- MARK: Top Standards Feature -->
-<li class="col">
-  <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-standards">
-    <img src="images/topstandards.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
-    <div>
-      <h3 id="feature-standards" class="h6 mb-1">Top Standards</h3>
-      <p class="mb-0 small">Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
-    </div>
-  </article>
-</div>
-
- <!-- MARK: How It Works Section -->
-<section id="how" class="how-section section-pad" aria-labelledby="how-title">
-  <div class="container">
-    <h2 id="how-title" class="h4 text-center fw-bold mb-4">How Does It Work?</h2>
-    <div class="row g-0">
-      <article class="col-sm-4 px-2">
-        <div class="rounded-2xl p-4 text-center soft-bg">
-          <figure class="mb-0">
-            <img src="images/IPPRO1.png" alt="App overview screen" style="width:180px;">
-            <figcaption id="how-step-1" class="visually-hidden">Account overview</figcaption>
-          </figure>
+            <li class="col">
+              <article class="d-flex align-items-start gap-3 feature-item" aria-labelledby="feature-standards">
+                <img src="images/topstandards.svg" class="feature-icon" style="width: 60px; height: 60px;" alt="" aria-hidden="true">
+                <div>
+                  <h3 id="feature-standards" class="h6 mb-1">Top Standards</h3>
+                  <p class="mb-0 small">Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
+                </div>
+              </article>
+            </li>
+          </ul>
         </div>
-      </article>
-      <article class="col-sm-4 px-2">
-        <div class="rounded-2xl p-4 text-center soft-bg">
-          <figure class="mb-0">
-            <img src="images/IPPRO2.png" alt="Latest transaction history" style="width:180px;">
-            <figcaption id="how-step-2" class="visually-hidden">Latest transaction history</figcaption>
-          </figure>
-          <h3 class="h5 mt-3 mb-3">Latest transaction history</h3>
-          <p class="small text-muted mb-0">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
-        </div>
-      </article>
-      <article class="col-sm-4 px-2">
-        <div class="rounded-2xl p-4 text-center soft-bg">
-          <figure class="mb-0">
-            <img src="images/IPPRO3.png" alt="Explore more features" style="width:180px;">
-            <figcaption id="how-step-3" class="visually-hidden">Explore more features</figcaption>
-          </figure>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
 
-<!-- MARK: App Features -->
+        <!-- MARK: How It Works Section -->
+        <section id="how" class="how-section section-pad" aria-labelledby="how-title">
+          <div class="container">
+            <h2 id="how-title" class="h4 text-center fw-bold mb-4">How Does It Work?</h2>
+            <div class="row g-0">
+              <article class="col-sm-4 px-2">
+                <div class="rounded-2xl p-4 text-center soft-bg">
+                  <figure class="mb-0">
+                    <img src="images/IPPRO1.png" alt="App overview screen" style="width:180px;">
+                    <figcaption id="how-step-1" class="visually-hidden">Account overview</figcaption>
+                  </figure>
+                </div>
+              </article>
+              <article class="col-sm-4 px-2">
+                <div class="rounded-2xl p-4 text-center soft-bg">
+                  <figure class="mb-0">
+                    <img src="images/IPPRO2.png" alt="Latest transaction history" style="width:180px;">
+                    <figcaption id="how-step-2" class="visually-hidden">Latest transaction history</figcaption>
+                  </figure>
+                  <h3 class="h5 mt-3 mb-3">Latest transaction history</h3>
+                  <p class="small text-muted mb-0">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
+                </div>
+              </article>
+              <article class="col-sm-4 px-2">
+                <div class="rounded-2xl p-4 text-center soft-bg">
+                  <figure class="mb-0">
+                    <img src="images/IPPRO3.png" alt="Explore more features" style="width:180px;">
+                    <figcaption id="how-step-3" class="visually-hidden">Explore more features</figcaption>
+                  </figure>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+ <!-- MARK: App Features -->
 <section id="custom-features" class="section-pad">
   <div class="container">
-    <!-- First Row: Text Left - Images Right -->
     <div class="row align-items-center justify-content-center mb-5">
       <div class="col-md-4">
         <h3 class="h4 fw-bold">Make your money<br>transfer simple and clear</h3>
-        <p class="mb-3">Banking transactions are free for you</p>
-        <p class="mb-3">No monthly cash commission</p>
-        <p class="mb-3">Manage payments and transactions online</p>
+        
+        <p class="mb-3">
+          <img src="images/bx-check-circle.png" alt="" class="me-2" style="width: 20px; height: 20px;">
+          Banking transactions are free for you
+        </p>
+        
+        <p class="mb-3">
+          <img src="images/bx-check-circle.png" alt="" class="me-2" style="width: 20px; height: 20px;">
+          No monthly cash commission
+        </p>
+        
+        <p class="mb-3">
+          <img src="images/bx-check-circle.png" alt="" class="me-2" style="width: 20px; height: 20px;">
+          Manage payments and transactions online
+        </p>
+        
         <a href="#" class="btn btn-primary">Learn more →</a>
       </div>
       <div class="col-md-6 position-relative" style="min-height: 300px;">
@@ -309,54 +325,69 @@
         <img src="images/inner2.png" alt="Second feature" class="position-absolute" style="top: 230px; right: 150px; width: 200px;">
       </div>
     </div>
-
-    <!-- Second Row: -->
-<div class="row align-items-center justify-content-center">
-  <div class="col-md-4 position-relative" style="min-height: 300px;">
-    <img src="images/inner3.png" alt="Third feature" class="position-absolute" style="top: 0; left: 0; width: 300px;">
-    <img src="images/card.png" alt="Fourth feature" class="position-absolute" style="top: 70px; left: 100px; width: 250px;">
   </div>
-  <div class="col-md-6">
-    <h3 class="h4 fw-bold mb-4" style="margin-left: 0px;">Receive payment from<br>international bank details</h3>
-    <div class="row">
-      <div class="col-6">
-  <div class="text-left mb-3">
-    <img src="images/Easypaymenticon.svg" alt="Easy payment" class="feature-icon mb-2" style="width: 60px; height: 60px;">
-    <div>
-      <p class="mb-0">Manage your payments online.<br>Mollis congue egestas egestas fermentum fames.</p>
-    </div>
-  </div>
-</div>
-<div class="col-6">
-  <div class="text-left mb-3">
-    <img src="images/regularCashback.svg" alt="Cashback" class="feature-icon mb-2" style="width: 60px; height: 60px;">
-    <div>
-      <p class="mb-0">A elementur and imperdiet enim,<br>pretium etiam facilisi aenean<br>quam mauris.</p>
-    </div>
-  </div>
-</div>
-</div>
-<a href="#" class="btn btn-primary">Learn more →</a>
-</div>
-</div>
 </section>
-  <!-- MARK: Subscribe Section -->
-  <section id="subscribe" class="section-pad" aria-labelledby="subscribe-title">
-    <div class="container">
-      <h2 id="subscribe-title" class="visually-hidden">Subscribe</h2>
 
-      <section class="p-4 rounded-2xl d-flex flex-column flex-sm-row align-items-center gap-3 soft-bg" aria-label="Subscribe to newsletter">
-        <p class="me-auto fw-semibold mb-2 mb-sm-0">Subscribe to our newsletter to stay informed about latest updates</p>
-        <form class="d-flex gap-2" action="#" method="post" aria-label="Subscription form">
-          <label for="email" class="visually-hidden">Email address</label>
-          <input id="email" name="email" type="email" class="form-control" placeholder="Your email" autocomplete="email" required>
-          <button class="btn btn-primary" type="submit">Subscribe</button>
-        </form>
-      </section>
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-4 position-relative" style="min-height: 300px;">
+                <img src="images/inner3.png" alt="Third feature" class="position-absolute" style="top: 0; left: 0; width: 300px;">
+                <img src="images/card.png" alt="Fourth feature" class="position-absolute" style="top: 70px; left: 100px; width: 250px;">
+              </div>
+              <div class="col-md-6">
+                <h3 class="h4 fw-bold mb-4" style="margin-left: 0px;">Receive payment from<br>international bank details</h3>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="text-left mb-3">
+                      <img src="images/Easypaymenticon.svg" alt="Easy payment" class="feature-icon mb-2" style="width: 60px; height: 60px;">
+                      <div>
+                        <p class="mb-0">Manage your payments online.<br>Mollis congue egestas egestas fermentum fames.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-left mb-3">
+                      <img src="images/regularCashback.svg" alt="Cashback" class="feature-icon mb-2" style="width: 60px; height: 60px;">
+                      <div>
+                        <p class="mb-0">A elementur and imperdiet enim,<br>pretium etiam facilisi aenean<br>quam mauris.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-primary">Learn more →</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
     </div>
   </section>
 
 </main>
+
+<!-- MARK: Subscribe Section -->
+<section id="subscribe" class="section-pad" aria-labelledby="subscribe-title">
+  <div class="container">
+    <div class="subscribe-cta rounded-2xl px-4 px-md-5 py-4 py-md-5 d-flex flex-column flex-lg-row align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3 mb-3 mb-lg-0">
+        <img src="images/notification.png" alt="" width="48" height="48" class="flex-shrink-0">
+        <h2 id="subscribe-title" class="h5 fw-bold mb-0">
+          Subscribe to our newsletter to stay informed about latest updates
+        </h2>
+      </div>
+      <form class="subscribe-form d-flex w-100 w-lg-auto" action="#" method="post" aria-label="Subscription form" style="max-width: 420px;">
+        <div class="input-group">
+          <span class="input-group-text bg-white border-0 ps-3" aria-hidden="true">✉️</span>
+          <label for="email" class="visually-hidden">Email address</label>
+          <input id="email" name="email" type="email" class="form-control border-0" placeholder="Your Email" autocomplete="email" required>
+          <button class="btn btn-subscribe px-4" type="submit">Subscribe</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
 
 <!-- MARK: Footer -->
 <footer class="py-4 border-top text-center small" role="contentinfo">
