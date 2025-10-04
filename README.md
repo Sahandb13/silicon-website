@@ -29,7 +29,7 @@ app.js – litet script (uppdaterar årtal i footer)
 
 images/ – logotyper, mockups och små ikoner
 
-HTML5, CSS3 (custom properties), JavaScript (vanilla).
+HTML, CSS (custom properties), JavaScript (vanilla).
 Bootstrap 5 för grid/spacing
 
 Git/GitHub (snabbstart)
